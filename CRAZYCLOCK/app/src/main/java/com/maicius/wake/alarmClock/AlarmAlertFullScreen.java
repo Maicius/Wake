@@ -226,7 +226,7 @@ public class AlarmAlertFullScreen extends Activity {
         super.onDestroy();
         Log.v("maicius", "AlarmAlert.onDestroy()");
 
-        Intent intent = new Intent(AlarmAlertFullScreen.this, com.maicius.wake.alarmClock.Notification.class);
+        Intent intent = new Intent(AlarmAlertFullScreen.this, com.maicius.wake.InterChange.Notification.class);
         PendingIntent pi = PendingIntent.getActivity(AlarmAlertFullScreen.this, 0, intent, 0);
         int min = (int)(1+Math.random()%5);
         Calendar currentTime = Calendar.getInstance();

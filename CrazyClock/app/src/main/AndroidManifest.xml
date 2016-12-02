@@ -59,13 +59,13 @@
             android:configChanges="orientation|keyboardHidden|keyboard|navigation"
             android:label="@string/set_alarm" />
         <activity
-            android:name="com.maicius.wake.alarmClock.LogIn"
+            android:name="com.maicius.wake.InterChange.LogIn"
             android:label="@string/login_label_sign_in" />
         <activity
-            android:name="com.maicius.wake.alarmClock.Register"
+            android:name="com.maicius.wake.InterChange.Register"
             android:label="@string/login_label_sign_up" />
         <activity
-            android:name="com.maicius.wake.alarmClock.Notification"
+            android:name="com.maicius.wake.InterChange.Notification"
             android:label="@string/wake_sure" />
         <activity
             android:name="com.maicius.wake.alarmClock.SettingsActivity"
@@ -137,15 +137,15 @@
         </receiver>
 
         <activity
-            android:name="com.maicius.wake.alarmClock.UserSpace"
+            android:name="com.maicius.wake.InterChange.UserSpace"
             android:label="用户空间" >
         </activity>
         <activity
-            android:name="com.maicius.wake.alarmClock.GetUpHistory"
+            android:name="com.maicius.wake.InterChange.GetUpHistory"
             android:label="起床历史" >
         </activity>
         <activity
-            android:name="com.maicius.wake.alarmClock.UserInfo"
+            android:name="com.maicius.wake.InterChange.UserInfo"
             android:label="个人信息" >
         </activity>
     </application>
