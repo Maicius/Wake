@@ -6,14 +6,14 @@
         jumboMode="false"
         revision="23.0.3"
         sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
-        <dex dex="E:\AndroidStudioSDK\CRAZYCLOCK\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-eb742d06da8e404e3b65150ae23e9a8e752a9ee7.jar" />
+        <dex dex="G:\gitSourceCode\CRAZYCLOCK\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-eb742d06da8e404e3b65150ae23e9a8e752a9ee7.jar" />
     </item>
     <item
-        jar="E:\AndroidStudioSDK\CRAZYCLOCK\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\18.0.0\jars\classes.jar"
+        jar="G:\gitSourceCode\CRAZYCLOCK\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\18.0.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="8f11f56e350eacabf2273f646d981356eea0ed77">
-        <dex dex="E:\AndroidStudioSDK\CRAZYCLOCK\app\build\intermediates\pre-dexed\debug\classes-38c1e1e75ba6fd7b16ad028dd8fa392068f79bfa.jar" />
+        <dex dex="G:\gitSourceCode\CRAZYCLOCK\app\build\intermediates\pre-dexed\debug\classes-0c2dc87a03576fa99f59be1f87279c3b37567545.jar" />
     </item>
 
 </items>

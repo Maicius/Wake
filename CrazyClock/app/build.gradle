@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.cn.daming.deskclock"
+        applicationId "com.maicius.wake.alarmClock"
         minSdkVersion 16
         targetSdkVersion 18
     }

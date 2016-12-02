@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cn.daming.deskclock.test">
+    package="com.maicius.wake.alarmClock.test">
 
     <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="18" />
 
@@ -9,8 +9,8 @@
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="com.cn.daming.deskclock"
+                     android:targetPackage="com.maicius.wake.alarmClock"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for com.cn.daming.deskclock"/>
+                     android:label="Tests for com.maicius.wake.alarmClock"/>
 </manifest>

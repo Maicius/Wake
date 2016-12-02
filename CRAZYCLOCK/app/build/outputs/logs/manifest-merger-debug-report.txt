@@ -2,7 +2,7 @@
 manifest
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:2:1-153:12
 	package
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:3:5-38
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:3:5-42
 		INJECTED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml
 		INJECTED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -24,9 +24,9 @@ MERGED from [com.android.support:appcompat-v7:18.0.0] G:\gitSourceCode\CRAZYCLOC
 		INJECTED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml
 		INJECTED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml
 original-package
-ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:9:5-64
+ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:9:5-68
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:9:23-61
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:9:23-65
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:11:5-81
 	android:name
@@ -86,15 +86,15 @@ MERGED from [com.android.support:appcompat-v7:18.0.0] G:\gitSourceCode\CRAZYCLOC
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:30:9-41
 	android:icon
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:29:9-48
-provider#com.cn.daming.deskclock.AlarmProvider
+provider#com.maicius.wake.alarmClock.AlarmProvider
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:31:9-34:40
 	android:authorities
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:33:13-58
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:33:13-63
 	android:exported
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:32:13-65
-activity#com.cn.daming.deskclock.DeskClockMainActivity
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:32:13-69
+activity#com.maicius.wake.alarmClock.DeskClockMainActivity
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:36:9-56:20
 	android:label
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:40:13-45
@@ -107,7 +107,7 @@ ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:36:9-56:
 	android:theme
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:42:13-70
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:37:13-73
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:37:13-77
 meta-data#android.dock_home
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:45:13-47:40
 	android:value
@@ -132,33 +132,33 @@ category#android.intent.category.LAUNCHER
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:54:17-77
 	android:name
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:54:27-74
-activity#com.cn.daming.deskclock.SetAlarm
+activity#com.maicius.wake.alarmClock.SetAlarm
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:57:9-60:49
 	android:label
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:60:13-46
 	android:configChanges
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:59:13-83
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:58:13-60
-activity#com.cn.daming.deskclock.LogIn
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:58:13-64
+activity#com.maicius.wake.alarmClock.LogIn
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:61:9-63:59
 	android:label
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:63:13-56
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:62:13-34
-activity#com.cn.daming.deskclock.Register
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:62:13-61
+activity#com.maicius.wake.alarmClock.Register
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:64:9-66:59
 	android:label
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:66:13-56
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:65:13-37
-activity#com.cn.daming.deskclock.Notification
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:65:13-64
+activity#com.maicius.wake.alarmClock.Notification
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:67:9-69:49
 	android:label
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:69:13-46
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:68:13-41
-activity#com.cn.daming.deskclock.SettingsActivity
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:68:13-68
+activity#com.maicius.wake.alarmClock.SettingsActivity
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:70:9-78:20
 	android:label
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:73:13-45
@@ -167,10 +167,10 @@ ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:70:9-78:
 	android:taskAffinity
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:74:13-36
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:71:13-68
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:71:13-72
 intent-filter#android.intent.action.MAIN
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:75:13-77:29
-activity#com.cn.daming.deskclock.AlarmAlertFullScreen
+activity#com.maicius.wake.alarmClock.AlarmAlertFullScreen
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:79:9-85:73
 	android:excludeFromRecents
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:82:13-46
@@ -183,17 +183,17 @@ ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:79:9-85:
 	android:taskAffinity
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:84:13-36
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:80:13-72
-receiver#com.cn.daming.deskclock.AlarmReceiver
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:80:13-76
+receiver#com.maicius.wake.alarmClock.AlarmReceiver
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:87:9-93:20
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:87:19-71
-intent-filter#alarm_killed+cancel_snooze+com.cn.daming.deskclock.ALARM_ALERT
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:87:19-75
+intent-filter#alarm_killed+cancel_snooze+com.maicius.wake.alarmClock.ALARM_ALERT
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:88:13-92:29
-action#com.cn.daming.deskclock.ALARM_ALERT
-ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:89:17-78
+action#com.maicius.wake.alarmClock.ALARM_ALERT
+ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:89:17-82
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:89:25-75
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:89:25-79
 action#alarm_killed
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:90:17-55
 	android:name
@@ -202,7 +202,7 @@ action#cancel_snooze
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:91:17-56
 	android:name
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:91:25-53
-activity#com.cn.daming.deskclock.AlarmAlert
+activity#com.maicius.wake.alarmClock.AlarmAlert
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:95:9-101:50
 	android:excludeFromRecents
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:98:13-46
@@ -215,8 +215,8 @@ ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:95:9-101
 	android:taskAffinity
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:100:13-36
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:96:13-62
-activity#com.cn.daming.deskclock.HandleSetAlarm
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:96:13-66
+activity#com.maicius.wake.alarmClock.HandleSetAlarm
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:102:9-112:20
 	android:excludeFromRecents
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:104:13-46
@@ -225,25 +225,25 @@ ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:102:9-11
 	android:theme
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:106:13-59
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:103:13-43
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:103:13-70
 intent-filter#android.intent.action.SET_ALARM+android.intent.category.DEFAULT
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:107:13-111:29
 action#android.intent.action.SET_ALARM
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:108:17-74
 	android:name
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:108:25-71
-service#com.cn.daming.deskclock.AlarmKlaxon
+service#com.maicius.wake.alarmClock.AlarmKlaxon
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:122:9-128:19
 	android:description
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:124:13-68
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:123:13-63
-intent-filter#com.cn.daming.deskclock.ALARM_ALERT
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:123:13-67
+intent-filter#com.maicius.wake.alarmClock.ALARM_ALERT
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:125:13-127:29
-receiver#com.cn.daming.deskclock.AlarmInitReceiver
+receiver#com.maicius.wake.alarmClock.AlarmInitReceiver
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:130:9-137:20
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:130:19-75
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:130:19-79
 intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.LOCALE_CHANGED+android.intent.action.TIMEZONE_CHANGED+android.intent.action.TIME_SET
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:131:13-136:29
 action#android.intent.action.BOOT_COMPLETED
@@ -262,21 +262,21 @@ action#android.intent.action.LOCALE_CHANGED
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:135:17-79
 	android:name
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:135:25-76
-activity#com.cn.daming.deskclock.UserSpace
+activity#com.maicius.wake.alarmClock.UserSpace
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:139:9-142:20
 	android:label
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:141:13-33
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:140:13-61
-activity#com.cn.daming.deskclock.GetUpHistory
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:140:13-65
+activity#com.maicius.wake.alarmClock.GetUpHistory
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:143:9-146:20
 	android:label
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:145:13-33
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:144:13-64
-activity#com.cn.daming.deskclock.UserInfo
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:144:13-68
+activity#com.maicius.wake.alarmClock.UserInfo
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:147:9-150:20
 	android:label
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:149:13-33
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:148:13-60
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:148:13-64
