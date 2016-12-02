@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.service.Service;
 
-import java.util.Date;
-import java.text.SimpleDateFormat;
 public class GetUpTime extends HttpServlet {
 
 
