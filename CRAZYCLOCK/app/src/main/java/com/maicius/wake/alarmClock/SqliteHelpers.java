@@ -1,8 +1,7 @@
 /**
- * DatabaseHelper
+ * SqliteHelpers
  */
 package com.maicius.wake.alarmClock;
-
 import android.content.ContentProvider;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -17,7 +16,7 @@ import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
 
-public class AlarmProvider extends ContentProvider {
+public class SqliteHelpers extends ContentProvider {
     private SQLiteOpenHelper mOpenHelper;
 
     private static final int ALARMS = 1;
@@ -26,8 +25,8 @@ public class AlarmProvider extends ContentProvider {
             UriMatcher.NO_MATCH);
 
     static {
-        sURLMatcher.addURI("com.cn.daming.deskclock", "alarm", ALARMS);
-        sURLMatcher.addURI("com.cn.daming.deskclock", "alarm/#", ALARMS_ID);
+        sURLMatcher.addURI("com.maicius.wake.alramClock", "alarm", ALARMS);
+        sURLMatcher.addURI("com.maicius.wake.alramClock", "alarm/#", ALARMS_ID);
     }
 
     private static class DatabaseHelper extends SQLiteOpenHelper {
@@ -70,7 +69,7 @@ public class AlarmProvider extends ContentProvider {
         }
     }
 
-    public AlarmProvider() {
+    public SqliteHelpers() {
     }
 
     @Override

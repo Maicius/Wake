@@ -9,12 +9,11 @@ import android.os.Handler;
 import android.util.Log;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
-import com.maicius.wake.alarmClock.DeskClockMainActivity;
+import com.maicius.wake.alarmClock.MainActivity;
 import com.maicius.wake.alarmClock.R;
 import com.maicius.wake.web.WebService;
 
@@ -72,7 +71,7 @@ public class GetUpHistory extends Activity {
     public class MyThread implements Runnable {
         @Override
         public void run() {
-            m_info = WebService.executeHttpGet(DeskClockMainActivity.s_userName,WebService.State.GetTimeList);
+            m_info = WebService.executeHttpGet(MainActivity.s_userName,WebService.State.GetTimeList);
             Log.v("sss", "login:" + m_info);
             m_handler.post(new Runnable() {
                 @Override

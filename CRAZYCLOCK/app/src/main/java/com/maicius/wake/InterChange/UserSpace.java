@@ -1,3 +1,6 @@
+/**
+ * User space
+ */
 package com.maicius.wake.InterChange;
 
 import android.app.Activity;
@@ -8,7 +11,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.maicius.wake.alarmClock.DeskClockMainActivity;
+import com.maicius.wake.alarmClock.MainActivity;
 import com.maicius.wake.alarmClock.R;
 
 public class UserSpace extends Activity {
@@ -25,7 +28,7 @@ public class UserSpace extends Activity {
 
     private void mInitUI() {
         TextView userspace_name = (TextView) findViewById(R.id.userspace_name);
-        userspace_name.setText(DeskClockMainActivity.s_userName + "的空间");
+        userspace_name.setText(MainActivity.s_userName + "的空间");
 
         ImageView image_userInfo = (ImageView) findViewById(R.id.userInfo);
         ImageView image_getUpTime = (ImageView) findViewById(R.id.getUpTime);
@@ -43,7 +46,7 @@ public class UserSpace extends Activity {
         });
         image_exit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                DeskClockMainActivity.s_isLogged=false;
+                MainActivity.s_isLogged=false;
                 UserSpace.this.finish();
             }
         });

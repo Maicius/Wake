@@ -86,15 +86,15 @@ MERGED from [com.android.support:appcompat-v7:18.0.0] G:\gitSourceCode\CRAZYCLOC
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:30:9-41
 	android:icon
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:29:9-48
-provider#com.maicius.wake.alarmClock.AlarmProvider
+provider#com.maicius.wake.alarmClock.SqliteHelpers
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:31:9-34:40
 	android:authorities
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:33:13-63
 	android:exported
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:32:13-69
-activity#com.maicius.wake.alarmClock.DeskClockMainActivity
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:32:13-42
+activity#com.maicius.wake.alarmClock.MainActivity
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:36:9-56:20
 	android:label
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:40:13-45
@@ -107,7 +107,7 @@ ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:36:9-56:
 	android:theme
 		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:42:13-70
 	android:name
-		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:37:13-77
+		ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:37:13-41
 meta-data#android.dock_home
 ADDED from G:\gitSourceCode\CRAZYCLOCK\app\src\main\AndroidManifest.xml:45:13-47:40
 	android:value

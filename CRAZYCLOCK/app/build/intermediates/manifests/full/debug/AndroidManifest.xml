@@ -31,12 +31,12 @@
         android:icon="@drawable/clock_launcher"
         android:label="@string/app_name" >
         <provider
-            android:name="com.maicius.wake.alarmClock.AlarmProvider"
+            android:name="com.maicius.wake.alarmClock.SqliteHelpers"
             android:authorities="com.maicius.wake.alarmClock."
             android:exported="false" />
 
         <activity
-            android:name="com.maicius.wake.alarmClock.DeskClockMainActivity"
+            android:name="com.maicius.wake.alarmClock.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|navigation"
             android:icon="@drawable/clock_launcher"
             android:label="@string/app_name"

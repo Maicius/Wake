@@ -13,7 +13,7 @@ import android.widget.EditText;
 
 import java.util.StringTokenizer;
 
-import com.maicius.wake.alarmClock.DeskClockMainActivity;
+import com.maicius.wake.alarmClock.MainActivity;
 import com.maicius.wake.alarmClock.R;
 import com.maicius.wake.web.WebService;
 
@@ -62,7 +62,7 @@ public class UserInfo extends Activity {
     public class MyThread implements Runnable {
         @Override
         public void run() {
-            m_info = WebService.executeHttpGet(DeskClockMainActivity.s_userName, WebService.State.GetUserInfo);
+            m_info = WebService.executeHttpGet(MainActivity.s_userName, WebService.State.GetUserInfo);
             Log.v("sss", "login:" + m_info);
             m_handler.post(new Runnable() {
                 @Override
@@ -101,7 +101,7 @@ public class UserInfo extends Activity {
     public class UpdateInfo implements Runnable {
         @Override
         public void run() {
-            m_saveInfo = WebService.executeHttpGet(DeskClockMainActivity.s_userName,m_password.getText().toString(),
+            m_saveInfo = WebService.executeHttpGet(MainActivity.s_userName,m_password.getText().toString(),
                     m_phone.getText().toString());
             Log.v("sss", "login:" + m_saveInfo);
             m_handler.post(new Runnable() {

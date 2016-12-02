@@ -35,7 +35,7 @@ import android.widget.TextView;
 import com.maicius.wake.InterChange.LogIn;
 import com.maicius.wake.InterChange.UserSpace;
 
-public class DeskClockMainActivity extends Activity implements OnItemClickListener {
+public class MainActivity extends Activity implements OnItemClickListener {
 
     static final String PREFERENCES = "AlarmClock";
     public static String s_userName = "sxf";
@@ -106,7 +106,7 @@ public class DeskClockMainActivity extends Activity implements OnItemClickListen
     }
 
     /**
-     * 添加闹钟
+     * add alarm
      * 调用SetAlarm
      */
     private void addNewAlarm() {
@@ -114,7 +114,7 @@ public class DeskClockMainActivity extends Activity implements OnItemClickListen
     }
 
     /**
-     * 注册功能
+     * Log in
      */
     private void SignIn() {
         if (!s_isLogged) {
@@ -183,7 +183,7 @@ public class DeskClockMainActivity extends Activity implements OnItemClickListen
             TextView daysOfWeekView =
                     (TextView) digitalClock.findViewById(R.id.daysOfWeek);
             final String daysOfWeekStr =
-                    alarm.daysOfWeek.toString(DeskClockMainActivity.this, false);
+                    alarm.daysOfWeek.toString(MainActivity.this, false);
             if (daysOfWeekStr != null && daysOfWeekStr.length() != 0) {
                 daysOfWeekView.setText(daysOfWeekStr);
                 daysOfWeekView.setVisibility(View.VISIBLE);
@@ -241,7 +241,7 @@ public class DeskClockMainActivity extends Activity implements OnItemClickListen
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface d,
                                                         int w) {
-                                        Alarms.deleteAlarm(DeskClockMainActivity.this, id);
+                                        Alarms.deleteAlarm(MainActivity.this, id);
                                     }
                                 })
                         .setNegativeButton(android.R.string.cancel, null)
@@ -359,8 +359,8 @@ public class DeskClockMainActivity extends Activity implements OnItemClickListen
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Intent intent = new Intent(DeskClockMainActivity.this, android.app.Notification.class);
-        PendingIntent pi = PendingIntent.getActivity(DeskClockMainActivity.this, 0, intent, 0);
+        Intent intent = new Intent(MainActivity.this, android.app.Notification.class);
+        PendingIntent pi = PendingIntent.getActivity(MainActivity.this, 0, intent, 0);
 
         Calendar currentTime = Calendar.getInstance();
         //设置时间间隔为2分钟

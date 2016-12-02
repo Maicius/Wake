@@ -2,7 +2,7 @@ package com.maicius.wake.web;
 
 import android.util.Log;
 
-import com.maicius.wake.alarmClock.DeskClockMainActivity;
+import com.maicius.wake.alarmClock.MainActivity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -101,7 +101,7 @@ public class WebService {
             }
             //String dataStr = date.toString();
             //dataStr = dataStr.replaceAll(" ", "%20");
-            path = path + "?username=" + DeskClockMainActivity.s_userName + "&date=" + String.valueOf(date);
+            path = path + "?username=" + MainActivity.s_userName + "&date=" + String.valueOf(date);
 
             Log.v("sss", path);
             conn = (HttpURLConnection) new URL(path).openConnection();
@@ -153,7 +153,7 @@ public class WebService {
                     path = "http://" + IP + "/HelloWeb/GetUserInfo";
                     break;
             }
-            path = path + "?username=" + DeskClockMainActivity.s_userName;
+            path = path + "?username=" + MainActivity.s_userName;
             Log.v("sss", path);
             conn = (HttpURLConnection) new URL(path).openConnection();
 

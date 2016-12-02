@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.maicius.wake.alarmClock.DeskClockMainActivity;
+import com.maicius.wake.alarmClock.MainActivity;
 import com.maicius.wake.alarmClock.R;
 import com.maicius.wake.web.WebService;
 
@@ -73,8 +73,8 @@ public class LogIn extends Activity {
 
                     if (info.equals("success")) {
                         Log.v("sss", "start user space!");
-                        DeskClockMainActivity.s_userName = username.getText().toString();
-                        DeskClockMainActivity.s_isLogged = true;
+                        MainActivity.s_userName = username.getText().toString();
+                        MainActivity.s_isLogged = true;
                         startActivity(new Intent(LogIn.this, UserSpace.class));
                         LogIn.this.finish();
 

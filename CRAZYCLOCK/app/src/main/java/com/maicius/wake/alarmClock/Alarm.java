@@ -1,7 +1,6 @@
 package com.maicius.wake.alarmClock;
 import java.text.DateFormatSymbols;
 import java.util.Calendar;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.media.RingtoneManager;
