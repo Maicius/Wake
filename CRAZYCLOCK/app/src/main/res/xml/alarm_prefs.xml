@@ -7,11 +7,11 @@
     <Preference android:key="time"
         android:persistent="false"
         android:title="@string/time"/>
-    <com.cn.daming.deskclock.RepeatPreference
+    <com.maicius.wake.alarmClock.RepeatPreference
         android:persistent="false"
         android:key="setRepeat"
         android:title="@string/alarm_repeat" />
-    <com.cn.daming.deskclock.AlarmPreference
+    <com.maicius.wake.alarmClock.AlarmPreference
         android:key="alarm"
         android:title="@string/alert"
         android:ringtoneType="alarm"

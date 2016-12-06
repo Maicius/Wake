@@ -25,8 +25,8 @@ public class SqliteHelpers extends ContentProvider {
             UriMatcher.NO_MATCH);
 
     static {
-        sURLMatcher.addURI("com.maicius.wake.alramClock", "alarm", ALARMS);
-        sURLMatcher.addURI("com.maicius.wake.alramClock", "alarm/#", ALARMS_ID);
+        sURLMatcher.addURI("com.maicius.wake.alarmClock", "alarm", ALARMS);
+        sURLMatcher.addURI("com.maicius.wake.alarmClock", "alarm/#", ALARMS_ID);
     }
 
     private static class DatabaseHelper extends SQLiteOpenHelper {

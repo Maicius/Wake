@@ -243,10 +243,12 @@ public class SetAlarm extends PreferenceActivity
         // Enable "Revert" to go back to the original Alarm.
         final Button revert = (Button) findViewById(R.id.alarm_revert);
         revert.setEnabled(true);
+        Log.v("maicius", "updateTime " + mId);
         return saveAlarm();
     }
 
     private long saveAlarm() {
+        Log.v("maicius", "updateTime " + mId);
         Alarm alarm = new Alarm();
         alarm.id = mId;
         alarm.enabled = mEnabledPref.isChecked();

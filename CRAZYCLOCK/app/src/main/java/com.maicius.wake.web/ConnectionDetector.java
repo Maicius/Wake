@@ -1,20 +1,16 @@
+/**
+  A detector of web
+ */
 package com.maicius.wake.web;
+import android.app.Activity;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-/**
- * Created by Maicius on 2016/6/17.
- */
-public class ConnectionDetector {
-
-        private Context _context;
-
-        public ConnectionDetector(Context context){
-            this._context = context;
-        }
-        public boolean isConnectingToInternet(){
-            ConnectivityManager connectivity = (ConnectivityManager) _context.getSystemService(Context.CONNECTIVITY_SERVICE);
+public class ConnectionDetector extends Activity{
+        public static boolean isConnectingToInternet(Activity activity){
+            Context context = activity.getApplicationContext();
+            ConnectivityManager connectivity = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
             if (connectivity != null)
             {
                 NetworkInfo[] info = connectivity.getAllNetworkInfo();

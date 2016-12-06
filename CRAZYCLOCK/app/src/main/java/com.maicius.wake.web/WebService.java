@@ -1,16 +1,21 @@
 package com.maicius.wake.web;
 
+import android.app.Activity;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.maicius.wake.alarmClock.MainActivity;
-
+import com.maicius.wake.web.ConnectionDetector;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class WebService {
+public class WebService extends Activity{
     public enum State {
         LogIn,
         Register,
@@ -18,7 +23,6 @@ public class WebService {
         GetTimeList,
         GetUserInfo
     }
-
     // IP地址
     private static String IP = "116.62.41.211:8080";
 

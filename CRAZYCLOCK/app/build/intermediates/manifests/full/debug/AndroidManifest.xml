@@ -32,7 +32,7 @@
         android:label="@string/app_name" >
         <provider
             android:name="com.maicius.wake.alarmClock.SqliteHelpers"
-            android:authorities="com.maicius.wake.alarmClock."
+            android:authorities="com.maicius.wake.alarmClock"
             android:exported="false" />
 
         <activity
