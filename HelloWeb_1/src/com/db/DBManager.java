@@ -4,10 +4,10 @@ import java.sql.*;
 public class DBManager {
 
 	// 数据库连接常量
-	public static final String DRIVER = "org.postgresql.Driver";
-	public static final String USER = "postgres";
-	public static final String PASS = "110110";
-	public static final String URL = "jdbc:postgresql://localhost:5432/clock";
+	public static final String DRIVER = "com.mysql.jdbc.Driver";
+	public static final String USER = "root";
+	public static final String PASS = "yuanhao110110";
+	public static final String URL = "jdbc:mysql://localhost:5432/clock";
 
 	// 静态成员，支持单态模式
 	private static DBManager per = null;

@@ -20,7 +20,7 @@ public class WebService {
     }
 
     // IP地址
-    private static String IP = "172.17.99.3:8080";
+    private static String IP = "116.62.41.211:8080";
 
     /**
      * 通过Get方式获取HTTP服务器数据
