@@ -14,9 +14,6 @@ import android.widget.EditText;
 import com.maicius.wake.alarmClock.R;
 import com.maicius.wake.web.WebService;
 
-/**
- * Created by Maicius on 2016/6/7.
- */
 public class Register extends Activity {
     private String info;
     private ProgressDialog dialog;

@@ -125,7 +125,7 @@ public Boolean getUserInfo(String username) {
 			if (rs.next()) {
 				String name=rs.getString("name");
 				String password=rs.getString("password");
-				String phone=rs.getString("phone_num");
+				String phone=rs.getString("phone");
 				userinfo=name+"#"+password+"#"+phone;
 			}
 			sql.closeDB();
@@ -140,7 +140,7 @@ public Boolean getUserInfo(String username) {
 public Boolean setUserInfo(String username,String password, String phone) {
 	
 			// 获取Sql查询语句
-			String SqlUpdate = "update appuser set name='"+username+"',password='"+password+"',phone_num='"+phone+"' where name ='"+username+"'";
+			String SqlUpdate = "update appuser set name='"+username+"',password='"+password+"',phone='"+phone+"' where name ='"+username+"'";
 
 			// 获取DB对象
 			DBManager sql = DBManager.createInstance();
