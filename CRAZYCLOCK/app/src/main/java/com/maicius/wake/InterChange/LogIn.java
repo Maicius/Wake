@@ -31,7 +31,7 @@ public class LogIn extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         Log.v("maicius", "enter sign in");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sign_in);
+        setContentView(R.layout.log_in);
 
         TextView Register = (TextView) findViewById(R.id.register);
         final Button SignIn = (Button) findViewById(R.id.signin_button);
@@ -40,7 +40,7 @@ public class LogIn extends Activity {
         //点击注册
         Register.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                SignUp();
+                Register();
             }
         });
         //点击登录
@@ -94,7 +94,7 @@ public class LogIn extends Activity {
         }
     }
 
-    private void SignUp() {
+    private void Register() {
         startActivity(new Intent(this, Register.class));
     }
 }

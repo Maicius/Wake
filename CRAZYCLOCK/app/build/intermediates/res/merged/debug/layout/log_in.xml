@@ -34,7 +34,7 @@
             android:inputType="text"/>
         <!-- 密码 text -->
         <TextView
-            android:id="@+id/login_password_input"
+            android:id="@+id/register_password_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/username_edit"
@@ -45,7 +45,7 @@
             android:id="@+id/password_edit"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/login_password_input"
+            android:layout_below="@id/register_password_text"
             android:password="true"
             android:singleLine="true"
             android:inputType="textPassword" />
@@ -80,4 +80,4 @@
             android:layout_marginRight="25dp"
             android:layout_marginBottom="25dp" />
     </RelativeLayout>
-</LinearLayout>  <!-- From: file:/G:/gitSourceCode/CRAZYCLOCK/app/src/main/res/layout/sign_in.xml -->
+</LinearLayout>  <!-- From: file:/G:/gitSourceCode/CRAZYCLOCK/app/src/main/res/layout/log_in.xml -->

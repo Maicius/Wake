@@ -17,40 +17,18 @@ import com.maicius.wake.web.WebService;
 public class Register extends Activity {
     private String info;
     private ProgressDialog dialog;
-    EditText username=null, password=null, password_confirm=null;
+    EditText username, password, password_confirm;
     private static Handler handler = new Handler();
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.v("maicius", "enter sign in");
-        setContentView(R.layout.sign_up);
-        Button SignUp = (Button) findViewById(R.id.sign_up_button);
+        setContentView(R.layout.register);
+        Button register_button = (Button) findViewById(R.id.sign_up_button);
         username = (EditText) findViewById(R.id.register_username);
         password = (EditText) findViewById(R.id.register_password);
-        password_confirm = (EditText) findViewById(R.id.register_password_confirm);
 
-        if(username == null || password_confirm ==null || password==null){
-            dialog = new ProgressDialog(Register.this);
-            dialog.setMessage("信息没有填完哦");
-            dialog.show();
-            username = (EditText) findViewById(R.id.register_username);
-            password = (EditText) findViewById(R.id.register_password);
-            password_confirm = (EditText) findViewById(R.id.register_password_confirm);
-        }
-
-        while(password !=password_confirm){
-            dialog = new ProgressDialog(Register.this);
-            dialog.setMessage("两次输入密码不一样");
-            dialog.show();
-            password = null;
-            password_confirm = null;
-            password = (EditText) findViewById(R.id.register_password);
-            password_confirm = (EditText) findViewById(R.id.register_password_confirm);
-            if(password == password_confirm)
-                break;
-        }
-
-        SignUp.setOnClickListener(new View.OnClickListener() {
+        register_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog = new ProgressDialog(Register.this);
@@ -75,7 +53,7 @@ public class Register extends Activity {
 
                     if (info.equals("success")) {
                         Register.this.finish();
-                        setContentView(R.layout.sign_in);
+                        setContentView(R.layout.log_in);
                     }
                     else if (info.equals("failed")) {
                         AlertDialog.Builder alertDialog = new AlertDialog.Builder(Register.this);
