@@ -40,15 +40,15 @@ public class WebService extends Activity{
             String path;
             switch (state) {
                 case LogIn:
-                    path = "http://" + IP + "/wake_v1.0/LogLet";
+                    path = "http://" + IP + "/LogLet";
                     break;
 
                 case Register:
-                    path = "http://" + IP + "/wake_v1.0/RegLet";
+                    path = "http://" + IP + "/RegLet";
                     break;
 
                 default:
-                    path = "http://" + IP + "/wake_v1.0/LogLet";
+                    path = "http://" + IP + "/LogLet";
                     break;
             }
             path = path + "?username=" + username + "&password=" + password;
@@ -98,10 +98,10 @@ public class WebService extends Activity{
             switch (state) {
                 case GetUpTime:
                    // path = "http://" + IP + "/HelloWeb/GetUpTime";
-                    path = "http://" + IP + "/wake_v1.0/GetUpTime";
+                    path = "http://" + IP + "/GetUpTime";
                     break;
                 default:
-                    path = "http://" + IP + "/wake_v1.0/GetUpTime";
+                    path = "http://" + IP + "/GetUpTime";
                    // path = "http://" + IP + "/HelloWeb/GetUpTime";
                     break;
             }
@@ -154,11 +154,11 @@ public class WebService extends Activity{
             switch (state) {
                 case GetTimeList:
                     //path = "http://" + IP + "/HelloWeb/TimeHistory";
-                    path = "http://" + IP + "/wake_v1.0/TimeHistory";
+                    path = "http://" + IP + "/TimeHistory";
                     break;
                 case GetUserInfo:
                     //path = "http://" + IP + "/HelloWeb/GetUserInfo";
-                    path = "http://" + IP + "/wake_v1.0/GetUserInfo";
+                    path = "http://" + IP + "/GetUserInfo";
                     break;
             }
             path = path + "?username=" + MainActivity.s_userName;
@@ -205,7 +205,7 @@ public class WebService extends Activity{
             // URL 地址
             String path = "";
             //path = "http://" + IP + "/HelloWeb/SetUserInfo";
-            path = "http://" + IP + "/wake_v1.0/SetUserInfo";
+            path = "http://" + IP + "/SetUserInfo";
             path = path + "?username=" + username + "&password=" + password + "&phone=" + phone;
             Log.v("sss", path);
             conn = (HttpURLConnection) new URL(path).openConnection();

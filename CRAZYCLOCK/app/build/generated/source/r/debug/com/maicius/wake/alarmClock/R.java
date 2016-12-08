@@ -871,7 +871,7 @@ containing a value of this type.
         public static final int listMode=0x7f0d0004;
         public static final int list_item=0x7f0d0027;
         public static final int login_div=0x7f0d005f;
-        public static final int login_password_input=0x7f0d0062;
+        public static final int register_password_text =0x7f0d0062;
         public static final int login_user_input=0x7f0d0060;
         public static final int menu_item_add_alarm=0x7f0d0075;
         public static final int menu_item_alarms=0x7f0d007a;
@@ -884,7 +884,7 @@ containing a value of this type.
         public static final int normal=0x7f0d0005;
         public static final int password=0x7f0d0047;
         public static final int password_edit=0x7f0d0063;
-        public static final int password_sign_up=0x7f0d0068;
+        public static final int register_password =0x7f0d0068;
         public static final int phone=0x7f0d0048;
         public static final int progress_circular=0x7f0d0034;
         public static final int progress_horizontal=0x7f0d0035;

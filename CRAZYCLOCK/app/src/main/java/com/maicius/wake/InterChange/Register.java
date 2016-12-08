@@ -17,7 +17,7 @@ import com.maicius.wake.web.WebService;
 public class Register extends Activity {
     private String info;
     private ProgressDialog dialog;
-    EditText username, password;
+    EditText username=null, password=null, password_confirm=null;
     private static Handler handler = new Handler();
 
     public void onCreate(Bundle savedInstanceState) {
@@ -25,8 +25,31 @@ public class Register extends Activity {
         Log.v("maicius", "enter sign in");
         setContentView(R.layout.sign_up);
         Button SignUp = (Button) findViewById(R.id.sign_up_button);
-        username = (EditText) findViewById(R.id.username_sign_up);
-        password = (EditText) findViewById(R.id.password_sign_up);
+        username = (EditText) findViewById(R.id.register_username);
+        password = (EditText) findViewById(R.id.register_password);
+        password_confirm = (EditText) findViewById(R.id.register_password_confirm);
+
+        if(username == null || password_confirm ==null || password==null){
+            dialog = new ProgressDialog(Register.this);
+            dialog.setMessage("信息没有填完哦");
+            dialog.show();
+            username = (EditText) findViewById(R.id.register_username);
+            password = (EditText) findViewById(R.id.register_password);
+            password_confirm = (EditText) findViewById(R.id.register_password_confirm);
+        }
+
+        while(password !=password_confirm){
+            dialog = new ProgressDialog(Register.this);
+            dialog.setMessage("两次输入密码不一样");
+            dialog.show();
+            password = null;
+            password_confirm = null;
+            password = (EditText) findViewById(R.id.register_password);
+            password_confirm = (EditText) findViewById(R.id.register_password_confirm);
+            if(password == password_confirm)
+                break;
+        }
+
         SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
