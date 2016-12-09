@@ -91,4 +91,4 @@
         android:layout_alignRight="@+id/phone"
         android:layout_alignEnd="@+id/phone" />
 </RelativeLayout>
-<!-- From: file:/G:/gitSourceCode/CRAZYCLOCK/app/src/main/res/layout/activity_user_info.xml -->
+<!-- From: file:/F:/Wake/CRAZYCLOCK/app/src/main/res/layout/activity_user_info.xml -->
