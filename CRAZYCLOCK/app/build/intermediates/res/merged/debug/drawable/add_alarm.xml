@@ -22,4 +22,4 @@
     <item android:state_focused="false"
         android:drawable="@drawable/ic_clock_add_alarm" />
 </selector>
-<!-- From: file:/G:/gitSourceCode/CRAZYCLOCK/app/src/main/res/drawable/add_alarm.xml -->
+<!-- From: file:/F:/Wake/CRAZYCLOCK/app/src/main/res/drawable/add_alarm.xml -->
