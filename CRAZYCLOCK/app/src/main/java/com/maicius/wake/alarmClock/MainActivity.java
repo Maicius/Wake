@@ -35,6 +35,8 @@ import android.widget.TextView;
 import com.maicius.wake.InterChange.LogIn;
 import com.maicius.wake.InterChange.UserSpace;
 
+import cn.smssdk.SMSSDK;
+
 public class MainActivity extends Activity implements OnItemClickListener {
 
     static final String PREFERENCES = "AlarmClock";
@@ -55,7 +57,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        SMSSDK.initSDK(this, "19c7040399c28", "d841bc898669f9aaf419bc4f6d1ec8a6");
         //取自定义布局的LayoutInflater
         mFactory = LayoutInflater.from(this);
         //取getSharedPreferences中key==“AlarmClock”的值
