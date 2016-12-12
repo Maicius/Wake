@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.maicius.wake.alarmClock.R;
+
 import java.util.HashMap;
 
 import cn.smssdk.EventHandler;
@@ -27,7 +29,7 @@ public class RegisterByPhone extends Activity {
                     HashMap<String, Object> phoneMap = (HashMap<String, Object>) data;
                     String country = (String) phoneMap.get("country");
                     String phone = (String) phoneMap.get("phone");
-
+                    setContentView(R.layout.log_in);
                     // 提交用户信息（此方法可以不调用）
                     registerUser(country, phone);
                 }

@@ -28,7 +28,7 @@
             android:id="@+id/register_username"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/log_in_hint"
+            android:hint="@string/register_hint"
             android:layout_below="@id/login_user_input"
             android:singleLine="true"
             android:inputType="text"/>
