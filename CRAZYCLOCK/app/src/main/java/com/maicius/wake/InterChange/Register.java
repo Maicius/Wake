@@ -160,7 +160,9 @@ public class Register extends Activity {
     public class SignUpThread implements Runnable {
         public void run() {
             info = WebService.executeHttpGet(userPhoneText.getText().toString(),
-                    passwordText.getText().toString(), WebService.State.Register);
+                    passwordText.getText().toString(),
+                    nicknameText.getText().toString(),
+                    WebService.State.Register);
             handler.post(new Runnable() {
                 @Override
                 public void run() {

@@ -943,9 +943,9 @@ containing a value of this type.
         public static final int never=0x7f0e0014;
         public static final int none=0x7f0e0010;
         public static final int normal=0x7f0e0005;
-        public static final int password=0x7f0e0047;
+        public static final int info_nickname =0x7f0e0047;
         public static final int password_edit=0x7f0e0060;
-        public static final int phone=0x7f0e0048;
+        public static final int biref_intro =0x7f0e0048;
         public static final int progress_circular=0x7f0e0034;
         public static final int progress_horizontal=0x7f0e0035;
         public static final int radio=0x7f0e002d;
@@ -980,11 +980,11 @@ containing a value of this type.
         public static final int submit_area=0x7f0e003f;
         public static final int tabMode=0x7f0e0006;
         public static final int textItem=0x7f0e0071;
-        public static final int textView=0x7f0e0043;
+        public static final int tel =0x7f0e0043;
         public static final int textView2=0x7f0e0076;
         public static final int textView3=0x7f0e0078;
-        public static final int textView4=0x7f0e0044;
-        public static final int textView5=0x7f0e0045;
+        public static final int nickname =0x7f0e0044;
+        public static final int brief_intro =0x7f0e0045;
         public static final int timeDisplay=0x7f0e004b;
         public static final int timeList=0x7f0e0042;
         public static final int title=0x7f0e0029;
@@ -993,7 +993,7 @@ containing a value of this type.
         public static final int up=0x7f0e001f;
         public static final int useLogo=0x7f0e000c;
         public static final int userInfo=0x7f0e0075;
-        public static final int username=0x7f0e0046;
+        public static final int telephone =0x7f0e0046;
         public static final int username_edit=0x7f0e005e;
         public static final int userspace_name=0x7f0e0073;
         public static final int ver_code_text=0x7f0e0068;

@@ -19,9 +19,9 @@ import com.maicius.wake.web.WebService;
 
 public class UserInfo extends Activity {
 
-    private EditText m_name;
-    private EditText m_password;
-    private EditText m_phone;
+    private EditText m_telephone;
+    private EditText m_info_nickname;
+    private EditText m_brief_intro;
     private Button m_button;
     private static Handler m_handler = new Handler();
     private ProgressDialog m_proDialog;
@@ -36,9 +36,9 @@ public class UserInfo extends Activity {
     }
 
     private void mInitUI() {
-        m_name = (EditText) findViewById(R.id.username);
-        m_password = (EditText) findViewById(R.id.password);
-        m_phone = (EditText) findViewById(R.id.phone);
+        m_telephone = (EditText) findViewById(R.id.telephone);
+        m_info_nickname = (EditText) findViewById(R.id.info_nickname);
+        m_brief_intro = (EditText) findViewById(R.id.biref_intro);
         m_button = (Button) findViewById(R.id.button_save);
         m_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -86,12 +86,12 @@ public class UserInfo extends Activity {
                     } else {
                         Log.v("sss***************", m_info);
                         StringTokenizer st = new StringTokenizer(m_info, "#");
-                        String name = st.nextToken();
-                        String password = st.nextToken();
-                        String phone = st.nextToken();
-                        m_name.setText(name);
-                        m_password.setText(password);
-                        m_phone.setText(phone);
+                        String telephone = st.nextToken();
+                        String info_nickname = st.nextToken();
+                        String brief_intro = st.nextToken();
+                        m_telephone.setText(telephone);
+                        m_info_nickname.setText(info_nickname);
+                        m_brief_intro.setText(brief_intro);
                     }
                 }
             });
@@ -101,8 +101,8 @@ public class UserInfo extends Activity {
     public class UpdateInfo implements Runnable {
         @Override
         public void run() {
-            m_saveInfo = WebService.executeHttpGet(MainActivity.s_userName,m_password.getText().toString(),
-                    m_phone.getText().toString());
+            m_saveInfo = WebService.executeHttpGet(MainActivity.s_userName,m_info_nickname.getText().toString(),
+                    m_brief_intro.getText().toString());
             Log.v("sss", "login:" + m_saveInfo);
             m_handler.post(new Runnable() {
                 @Override

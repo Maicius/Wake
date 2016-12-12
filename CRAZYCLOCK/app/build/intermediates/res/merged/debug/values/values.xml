@@ -508,7 +508,7 @@
     <string name="never">"一律不"</string>
     <string name="register_account">"手机号"</string>
     <string name="register_hint">"您的手机号"</string>
-    <string name="register_login_link">"使用手机验证"<a href="#" mce_href="#">快速注册</a></string>
+    <string name="register_login_link">"已有账号"<a href="#" mce_href="#">登录</a></string>
     <string name="register_nick_name">"用户名"</string>
     <string name="register_nickname_hint">"昵称"</string>
     <string name="register_password_confirm">"密码确认"</string>

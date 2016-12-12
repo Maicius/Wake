@@ -29,18 +29,18 @@ public class RegLet extends HttpServlet {
 		String username = request.getParameter("username");
 		username = new String(username.getBytes("ISO-8859-1"), "UTF-8");
 		String password = request.getParameter("password");
-		
+		String nickname = request.getParameter("nickname");
 		// 返回信息
 				response.setCharacterEncoding("UTF-8");
 				response.setContentType("text/html");
 				PrintWriter out = response.getWriter();
 				
 		// 验证处理
-		boolean reged = serv.register(username,password);
+		boolean reged = serv.register(username,password,nickname);
 		if (reged) {
 			System.out.print("Succss in Register");
 			request.getSession().setAttribute("username", username);
-			//response.sendRedirect("welcome.jsp");
+			
 			out.print("success");
 		} else {
 			System.out.print("failed");
@@ -57,11 +57,6 @@ public class RegLet extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-//		测试为何手机端中文乱码，电脑正常
-//		System.out.println("u1--"+username);
-//		System.out.println("u2--"+username);
-
 	}
 
 }

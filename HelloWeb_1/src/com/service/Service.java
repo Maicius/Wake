@@ -12,7 +12,7 @@ public class Service {
 	public Boolean login(String username, String password) {
 
 		// 获取Sql查询语句
-		String logSql = "select * from appuser where name ='" + username
+		String logSql = "select * from appuser where username ='" + username
 				+ "' and password ='" + password + "'";
 
 		// 获取DB对象
@@ -33,15 +33,17 @@ public class Service {
 		return false;
 	}
 
-	public Boolean register(String username, String password) {
+	public Boolean register(String username, String password, String nickname) {
 		
 		if (checkName(username)){
 			return false;
 		}
              
 		// 获取Sql查询语句
-		String regSql = "insert into appuser (name,password) values('"
-				+ username + "','" + password + "') ";
+		String regSql = "insert into appuser "
+				+ "(username,password,nickname) "
+				+ "values('"
+				+ username + "','" + password + "','"+ nickname+"') ";
 		System.out.println(regSql);
 		// 获取DB对象
 		DBManager sql = DBManager.createInstance();
@@ -60,12 +62,12 @@ public class Service {
 	public Boolean registerTime(String username, java.sql.Timestamp date){
 		int id;
 		do{
-			id =1+(int)(Math.random()*10000);
+			id =1+(int)(Math.random()*100000);
 		}
 		while(checkID(id));
              
 		// 获取Sql查询语句
-		String regTimeSql = "insert into getuptime (time_id, user_name, time) values('"+id+"','"
+		String regTimeSql = "insert into getuptime (time_id, username, up_time) values('"+id+"','"
 				+ username + "','" + date + "') ";
 		System.out.println(regTimeSql);
 		// 获取DB对象
@@ -87,7 +89,7 @@ public class Service {
         timeList="";
        
 		// 获取Sql查询语句
-		String SqlQuery = "select time from getuptime where user_name ='" + username+"'";
+		String SqlQuery = "select up_time from getuptime where username ='" + username+"'";
 
 		// 获取DB对象
 		DBManager sql = DBManager.createInstance();
@@ -113,7 +115,7 @@ public Boolean getUserInfo(String username) {
 		
         userinfo="";
 		// 获取Sql查询语句
-		String SqlQuery = "select * from appuser where name ='" + username+"'";
+		String SqlQuery = "select username, nickname, brief_intro from appuser where username ='" + username+"'";
 
 		// 获取DB对象
 		DBManager sql = DBManager.createInstance();
@@ -123,10 +125,10 @@ public Boolean getUserInfo(String username) {
 		try {
 			ResultSet rs = sql.executeQuery(SqlQuery);
 			if (rs.next()) {
-				String name=rs.getString("name");
-				String password=rs.getString("password");
-				String phone=rs.getString("phone");
-				userinfo=name+"#"+password+"#"+phone;
+				String user_name=rs.getString("username");
+				String nickname=rs.getString("nickname");
+				String biref_intro=rs.getString("biref_intro");
+				userinfo=user_name+"#"+nickname+"#"+biref_intro;
 			}
 			sql.closeDB();
 			return true;

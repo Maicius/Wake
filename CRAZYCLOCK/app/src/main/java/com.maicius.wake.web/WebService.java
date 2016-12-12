@@ -25,42 +25,19 @@ public class WebService extends Activity{
     }
     // IP地址
     private static String IP = "116.62.41.211:8080";
-
     /**
-     * 通过Get方式获取HTTP服务器数据
+     * DoGet
      */
-    public static String executeHttpGet(String username, String password, State state) {
-
+    private static String doHttpGet(String path){
         HttpURLConnection conn = null;
         InputStream is = null;
-
         try {
-            // 用户名 密码
-            // URL 地址
-            String path;
-            switch (state) {
-                case LogIn:
-                    path = "http://" + IP + "/LogLet";
-                    break;
-
-                case Register:
-                    path = "http://" + IP + "/RegLet";
-                    break;
-
-                default:
-                    path = "http://" + IP + "/LogLet";
-                    break;
-            }
-            path = path + "?username=" + username + "&password=" + password;
-
             conn = (HttpURLConnection) new URL(path).openConnection();
-
             conn.setConnectTimeout(3000); // 设置超时时间
             conn.setReadTimeout(3000);
             conn.setDoInput(true);
             conn.setRequestMethod("GET"); // 设置获取信息方式
             conn.setRequestProperty("Charset", "UTF-8"); // 设置接收数据编码格式
-
             if (conn.getResponseCode() == 200) {
                 is = conn.getInputStream();
                 return parseInfo(is);
@@ -86,160 +63,65 @@ public class WebService extends Activity{
         }
         return "服务器连接超时...";
     }
+    /**
+     * 登录
+     */
+    public static String executeHttpGet(String username, String password, State state) {
+        String path;
+        path = "http://" + IP + "/LogLet";
+        path = path + "?username=" + username + "&password=" + password;
+        return doHttpGet(path);
+    }
 
+    /**
+     * 注册
+     */
+    public static String executeHttpGet(String username, String password,
+                                        String nickname, State state){
+            String path;
+            path = "http://" + IP + "/LogLet";
+            path = path + "?username=" + username + "&password=" + password+"&nickname="+nickname;
+            return doHttpGet(path);
+    }
+    /**
+     * 上传起床时间
+     */
     public static String executeHttpGet(long date, State state) {
 
-        HttpURLConnection conn = null;
-        InputStream is = null;
-
-        try {
-            // URL 地址
-            String path;
-            switch (state) {
-                case GetUpTime:
-                   // path = "http://" + IP + "/HelloWeb/GetUpTime";
-                    path = "http://" + IP + "/GetUpTime";
-                    break;
-                default:
-                    path = "http://" + IP + "/GetUpTime";
-                   // path = "http://" + IP + "/HelloWeb/GetUpTime";
-                    break;
-            }
-            //String dataStr = date.toString();
-            //dataStr = dataStr.replaceAll(" ", "%20");
+            String path = "http://" + IP + "/GetUpTime";
             path = path + "?username=" + MainActivity.s_userName + "&date=" + String.valueOf(date);
+            return doHttpGet(path);
 
-            Log.v("sss", path);
-            conn = (HttpURLConnection) new URL(path).openConnection();
-
-            conn.setConnectTimeout(3000); // 设置超时时间
-            conn.setReadTimeout(3000);
-            conn.setDoInput(true);
-            conn.setRequestMethod("GET"); // 设置获取信息方式
-            conn.setRequestProperty("Charset", "UTF-8"); // 设置接收数据编码格式
-
-            if (conn.getResponseCode() == 200) {
-                is = conn.getInputStream();
-                return parseInfo(is);
-            }
-            return null;
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-
-            // 意外退出时进行连接关闭保护
-            if (conn != null) {
-                conn.disconnect();
-            }
-            if (is != null) {
-                try {
-                    is.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-
-        }
-        return "服务器连接超时...";
     }
 
     public static String executeHttpGet(String username, State state) {
 
         HttpURLConnection conn = null;
         InputStream is = null;
-        try {
             // URL 地址
-            String path = "";
-            switch (state) {
-                case GetTimeList:
-                    //path = "http://" + IP + "/HelloWeb/TimeHistory";
-                    path = "http://" + IP + "/TimeHistory";
-                    break;
-                case GetUserInfo:
-                    //path = "http://" + IP + "/HelloWeb/GetUserInfo";
-                    path = "http://" + IP + "/GetUserInfo";
-                    break;
+        String path = "";
+        switch (state) {
+            case GetTimeList:
+                //path = "http://" + IP + "/HelloWeb/TimeHistory";
+                path = "http://" + IP + "/TimeHistory";
+                break;
+            case GetUserInfo:
+                //path = "http://" + IP + "/HelloWeb/GetUserInfo";
+                path = "http://" + IP + "/GetUserInfo";
+                break;
             }
-            path = path + "?username=" + MainActivity.s_userName;
-            Log.v("sss", path);
-            conn = (HttpURLConnection) new URL(path).openConnection();
-
-            conn.setConnectTimeout(3000); // 设置超时时间
-            conn.setReadTimeout(3000);
-            conn.setDoInput(true);
-            conn.setRequestMethod("GET"); // 设置获取信息方式
-            conn.setRequestProperty("Charset", "UTF-8"); // 设置接收数据编码格式
-
-            if (conn.getResponseCode() == 200) {
-                is = conn.getInputStream();
-                return parseInfo(is);
-            }
-            return null;
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-
-            // 意外退出时进行连接关闭保护
-            if (conn != null) {
-                conn.disconnect();
-            }
-            if (is != null) {
-                try {
-                    is.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-
-        }
-        return "服务器连接超时...";
+        path = path + "?username=" + MainActivity.s_userName;
+        Log.v("sss", path);
+        return doHttpGet(path);
     }
 
     public static String executeHttpGet(String username, String password, String phone) {
-
-        HttpURLConnection conn = null;
-        InputStream is = null;
-        try {
-            // URL 地址
             String path = "";
             //path = "http://" + IP + "/HelloWeb/SetUserInfo";
             path = "http://" + IP + "/SetUserInfo";
             path = path + "?username=" + username + "&password=" + password + "&phone=" + phone;
             Log.v("sss", path);
-            conn = (HttpURLConnection) new URL(path).openConnection();
-
-            conn.setConnectTimeout(3000); // 设置超时时间
-            conn.setReadTimeout(3000);
-            conn.setDoInput(true);
-            conn.setRequestMethod("GET"); // 设置获取信息方式
-            conn.setRequestProperty("Charset", "UTF-8"); // 设置接收数据编码格式
-
-            if (conn.getResponseCode() == 200) {
-                is = conn.getInputStream();
-                return parseInfo(is);
-            }
-            return null;
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-
-            // 意外退出时进行连接关闭保护
-            if (conn != null) {
-                conn.disconnect();
-            }
-            if (is != null) {
-                try {
-                    is.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-
-        }
-        return "服务器连接超时...";
+        return doHttpGet(path);
     }
 
     // 将输入流转化为 String 型
