@@ -7,19 +7,35 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.maicius.wake.alarmClock.R;
 import com.maicius.wake.web.WebService;
+
+import org.json.JSONObject;
+
 import java.util.regex.Pattern;
 
+import cn.smssdk.EventHandler;
+import cn.smssdk.SMSSDK;
+
 public class Register extends Activity {
+    private static final int CODE_ING = 1;   //已发送，倒计时
+    private static final int CODE_REPEAT = 2;  //重新发送
+    private static final int SMSDDK_HANDLER = 3;  //短信回调
+    private int TIME = 60;//倒计时60s
     private String info;
     private ProgressDialog dialog;
-    EditText username, password, password_confirm;
+    EditText userPhoneText, passwordText, nicknameText, verCodeText;
+    String userPhone, password;
+    Button registerVerCode;
     private static Handler handler = new Handler();
 
     public void onCreate(Bundle savedInstanceState) {
@@ -28,36 +44,35 @@ public class Register extends Activity {
         setContentView(R.layout.register);
         TextView Login = (TextView) findViewById(R.id.login);
         Button register_button = (Button) findViewById(R.id.sign_up_button);
-        username = (EditText) findViewById(R.id.register_username);
-        password = (EditText) findViewById(R.id.register_password);
-        password_confirm = (EditText) findViewById(R.id.register_password_confirm);
+        userPhoneText = (EditText) findViewById(R.id.register_username);
+        passwordText = (EditText) findViewById(R.id.register_password);
+        nicknameText = (EditText) findViewById(R.id.register_nickname);
+        registerVerCode = (Button)findViewById(R.id.register_ver_code);
+        verCodeText = (EditText) findViewById(R.id.ver_code_text);
+        //initSDK();
         Login.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //LogIn();
-                registerByPhone();
+                LogIn();
+                //registerByPhone();
             }
         });
 
         register_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (username.getText().toString().equals("")){
-                    raiseAlertDialog("提示","用户名不能为空");
+                if (userPhoneText.getText().toString().equals("")){
+                    raiseAlertDialog("提示","手机号不能为空");
                 }
-                else if(!isUserName(username.getText().toString())){
-                    raiseAlertDialog("提示","");
+                else if(!isUserName(userPhoneText.getText().toString())){
+                    raiseAlertDialog("提示","不能识别的手机号码");
 
                 }
-                else if (password_confirm.getText().toString().equals("")
-                        || password.getText().toString().equals("")) {
+                else if (passwordText.getText().toString().equals("")) {
                     raiseAlertDialog("提示","密码不能为空");
                 }
-                else if(password.getText().toString().length()<6
-                        || password.getText().toString().length()>16){
-                    raiseAlertDialog("提示","密码长度必须在6-16之间");
-                }
-                else if (!(password_confirm.getText().toString().equals(password.getText().toString()))) {
-                    raiseAlertDialog("提示","两次密码不一致");
+                else if(passwordText.getText().toString().length()<6
+                        || passwordText.getText().toString().length()>16){
+                    raiseAlertDialog("提示","密码长度必须在6-16位之间");
                 }
                 else{
                     dialog = new ProgressDialog(Register.this);
@@ -74,7 +89,8 @@ public class Register extends Activity {
 
     public class SignUpThread implements Runnable {
         public void run() {
-            info = WebService.executeHttpGet(username.getText().toString(), password.getText().toString(), WebService.State.Register);
+            info = WebService.executeHttpGet(userPhoneText.getText().toString(),
+                    passwordText.getText().toString(), WebService.State.Register);
             handler.post(new Runnable() {
                 @Override
                 public void run() {
@@ -108,7 +124,7 @@ public class Register extends Activity {
         startActivity(new Intent(this, RegisterByPhone.class));
     }
     private boolean isUserName(String username){
-        return Pattern.matches("^[a-zA-Z]\\w{5,17}$", username);
+        return Pattern.matches("[1][3578]\\d{9}", username);
     }
 
     private void raiseAlertDialog(String title, String message){
@@ -121,4 +137,133 @@ public class Register extends Activity {
         });
         alertDialog.create().show();
     }
+
+/*    private void initSDK()
+    {
+        //SMSSDK.initSDK(this, "App Key", "App Secret");
+        EventHandler eventHandler = new EventHandler() {
+            @Override
+            public void afterEvent(int event, int result, Object data) {
+                Message msg = new Message();
+                msg.arg1 = event;
+                msg.arg2 = result;
+                msg.obj = data;
+                msg.what = SMSDDK_HANDLER;
+                handler.sendMessage(msg);
+            }
+        };
+        // 注册回调监听接口
+        SMSSDK.registerEventHandler(eventHandler);
+    }
+    //监听函数
+    private class OnClickListener implements View.OnClickListener
+    {
+        @Override
+        public void onClick(View v) {
+            userPhone = userPhoneText.getText().toString();
+            switch (v.getId()) {
+                case R.id.register_ver_code://获取验证码
+                    new AlertDialog.Builder(Register.this)
+                            .setTitle("发送短信")
+                            .setMessage("我们将把验证码发送到以下号码:\n"+"+86:"+userPhone)
+                            .setPositiveButton("确定", new DialogInterface.OnClickListener()
+                            {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which)
+                                {
+                                    SMSSDK.getVerificationCode("86", userPhone);
+                                    registerVerCode.setClickable(false);
+                                    new Thread(new Runnable()
+                                    {
+                                        @Override
+                                        public void run()
+                                        {
+                                            for (int i = 60; i > 0; i--)
+                                            {
+                                                handler.sendEmptyMessage(CODE_ING);
+                                                if (i <= 0)
+                                                {
+                                                    break;
+                                                }
+                                                try
+                                                {
+                                                    Thread.sleep(1000);
+                                                } catch (InterruptedException e)
+                                                {
+                                                    e.printStackTrace();
+                                                }
+                                            }
+                                            handler.sendEmptyMessage(CODE_REPEAT);
+                                        }
+                                    }).start();
+                                }
+                            })
+                            .create()
+                            .show();
+                    break;
+
+                case R.id.sign_up_button://注册
+                    SMSSDK.submitVerificationCode("86", userPhone, verCodeText.getText().toString());//对验证码进行验证->回调函数
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+    Handler handler = new Handler()
+    {
+        public void handleMessage(Message msg)
+        {
+            switch (msg.what)
+            {
+                case CODE_ING://已发送,倒计时
+                    registerVerCode.setText("重新发送("+--TIME+"s)");
+                    break;
+                case CODE_REPEAT://重新发送
+                    registerVerCode.setText("获取验证码");
+                    registerVerCode.setClickable(true);
+                    break;
+                case SMSDDK_HANDLER:
+                    int event = msg.arg1;
+                    int result = msg.arg2;
+                    Object data = msg.obj;
+                    //回调完成
+                    if (result == SMSSDK.RESULT_COMPLETE)
+                    {
+                        //验证码验证成功
+                        if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE)
+                        {
+                            Toast.makeText(Register.this, "验证成功", Toast.LENGTH_LONG).show();
+
+                        }
+                        //已发送验证码
+                        else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE)
+                        {
+                            Toast.makeText(getApplicationContext(), "验证码已经发送",
+                                    Toast.LENGTH_SHORT).show();
+                        } else
+                        {
+                            ((Throwable) data).printStackTrace();
+                        }
+                    }
+                    if(result==SMSSDK.RESULT_ERROR)
+                    {
+                        try {
+                            Throwable throwable = (Throwable) data;
+                            throwable.printStackTrace();
+                            JSONObject object = new JSONObject(throwable.getMessage());
+                            String des = object.optString("detail");//错误描述
+                            int status = object.optInt("status");//错误代码
+                            if (status > 0 && !TextUtils.isEmpty(des)) {
+                                Toast.makeText(getApplicationContext(), des, Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                        } catch (Exception e) {
+                            //do something
+                        }
+                    }
+                    break;
+            }
+        }
+    };*/
 }
