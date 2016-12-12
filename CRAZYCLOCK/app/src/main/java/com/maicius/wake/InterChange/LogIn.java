@@ -37,6 +37,7 @@ public class LogIn extends Activity {
         final Button SignIn = (Button) findViewById(R.id.signin_button);
         username = (EditText) findViewById(R.id.username_edit);
         password = (EditText) findViewById(R.id.password_edit);
+
         //点击注册
         Register.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

@@ -34,7 +34,7 @@
     <string name="register_password_confirm">"密码确认"</string>
     <string name="login_register_link">"没有账号？"<a href="#" mce_href="#">注册</a></string>
     <string name="register_hint">"您的手机号"</string>
-    <string name="register_login_link">"使用手机验证"<a href="#" mce_href="#">快速注册</a></string>
+    <string name="register_login_link">"已有账号"<a href="#" mce_href="#">登录</a></string>
     <string name="login_label_sign_in">"登陆"</string>
     <string name="login_label_sign_up">"注册"</string>
     <string name="sign_up">"注册"</string>

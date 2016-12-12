@@ -37,6 +37,7 @@ public class Register extends Activity {
     String userPhone, password;
     Button registerVerCode;
     Button registerButton;
+    static boolean getVerCodeCorrect = false;
     //private static Handler handler = new Handler();
 
     public void onCreate(Bundle savedInstanceState) {
@@ -52,11 +53,10 @@ public class Register extends Activity {
         verCodeText = (EditText) findViewById(R.id.ver_code_text);
 
         initSDK();
-        registerButton.setClickable(false);
+        registerButton.setEnabled(false);
         Login.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 LogIn();
-                //registerByPhone();
             }
         });
         registerVerCode.setOnClickListener(new View.OnClickListener(){
@@ -140,13 +140,18 @@ public class Register extends Activity {
                 }
                 else{
                     SMSSDK.submitVerificationCode("86", userPhone, verCodeText.getText().toString());//对验证码进行验证->回调函数
-                    dialog = new ProgressDialog(Register.this);
-                    dialog.setTitle("提示");
-                    dialog.setMessage("正在注册，请稍后...");
-                    dialog.setCancelable(false);
-                    dialog.show();
-                            //创建子线程
-                    new Thread(new SignUpThread()).start();
+                    if(getVerCodeCorrect == true) {
+                        dialog = new ProgressDialog(Register.this);
+                        dialog.setTitle("提示");
+                        dialog.setMessage("正在注册，请稍后...");
+                        dialog.setCancelable(false);
+                        dialog.show();
+                        //创建子线程
+                        new Thread(new SignUpThread()).start();
+                    }
+                    else{
+                        raiseAlertDialog("提示","请输入正确的验证码");
+                    }
                 }
             }
         });
@@ -184,9 +189,6 @@ public class Register extends Activity {
     }
     private void LogIn() {
         startActivity(new Intent(this, LogIn.class));
-    }
-    private void registerByPhone() {
-        startActivity(new Intent(this, RegisterByPhone.class));
     }
     private boolean isUserName(String username){
         return Pattern.matches("[1][3578]\\d{9}", username);
@@ -240,9 +242,11 @@ public class Register extends Activity {
                     //回调完成
                     if (result == SMSSDK.RESULT_COMPLETE)
                     {
+                        registerButton.setEnabled(true);
                         //验证码验证成功
                         if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE)
                         {
+                            getVerCodeCorrect = true;
                             Toast.makeText(Register.this, "验证成功", Toast.LENGTH_LONG).show();
                             registerButton.setClickable(true);
                         }
