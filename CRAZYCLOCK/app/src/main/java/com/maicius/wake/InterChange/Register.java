@@ -36,28 +36,89 @@ public class Register extends Activity {
     EditText userPhoneText, passwordText, nicknameText, verCodeText;
     String userPhone, password;
     Button registerVerCode;
-    private static Handler handler = new Handler();
+    Button registerButton;
+    //private static Handler handler = new Handler();
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.v("maicius", "enter sign in");
         setContentView(R.layout.register);
         TextView Login = (TextView) findViewById(R.id.login);
-        Button register_button = (Button) findViewById(R.id.sign_up_button);
+        registerButton = (Button) findViewById(R.id.sign_up_button);
         userPhoneText = (EditText) findViewById(R.id.register_username);
         passwordText = (EditText) findViewById(R.id.register_password);
         nicknameText = (EditText) findViewById(R.id.register_nickname);
         registerVerCode = (Button)findViewById(R.id.register_ver_code);
         verCodeText = (EditText) findViewById(R.id.ver_code_text);
-        //initSDK();
+
+        initSDK();
+        registerButton.setClickable(false);
         Login.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 LogIn();
                 //registerByPhone();
             }
         });
+        registerVerCode.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                userPhone = userPhoneText.getText().toString();
+                if (userPhoneText.getText().toString().equals("")){
+                    raiseAlertDialog("提示","手机号不能为空");
+                }
+                else if(!isUserName(userPhoneText.getText().toString())){
+                    raiseAlertDialog("提示","不能识别的手机号码");
 
-        register_button.setOnClickListener(new View.OnClickListener() {
+                }
+                else if (passwordText.getText().toString().equals("")) {
+                    raiseAlertDialog("提示","密码不能为空");
+                }
+                else if(passwordText.getText().toString().length()<6
+                        || passwordText.getText().toString().length()>16){
+                    raiseAlertDialog("提示","密码长度必须在6-16位之间");
+                }
+
+                else{
+                    new AlertDialog.Builder(Register.this)
+                            .setTitle("发送短信")
+                            .setMessage("我们将把验证码发送到以下号码:\n"+"+86:"+userPhone)
+                            .setPositiveButton("确定", new DialogInterface.OnClickListener()
+                            {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which)
+                                {
+                                    SMSSDK.getVerificationCode("86", userPhone);
+                                    registerVerCode.setClickable(false);
+                                    new Thread(new Runnable()
+                                    {
+                                        @Override
+                                        public void run()
+                                        {
+                                            for (int i = 60; i > 0; i--)
+                                            {
+                                                handler.sendEmptyMessage(CODE_ING);
+                                                if (i <= 0)
+                                                {
+                                                    break;
+                                                }
+                                                try
+                                                {
+                                                    Thread.sleep(1000);
+                                                } catch (InterruptedException e)
+                                                {
+                                                    e.printStackTrace();
+                                                }
+                                            }
+                                            handler.sendEmptyMessage(CODE_REPEAT);
+                                        }
+                                    }).start();
+                                }
+                            })
+                            .create()
+                            .show();
+                }
+            }
+        });
+        registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (userPhoneText.getText().toString().equals("")){
@@ -74,13 +135,17 @@ public class Register extends Activity {
                         || passwordText.getText().toString().length()>16){
                     raiseAlertDialog("提示","密码长度必须在6-16位之间");
                 }
+                else if(verCodeText.getText().toString().equals("")){
+                    raiseAlertDialog("提示","请输入正确的验证码");
+                }
                 else{
+                    SMSSDK.submitVerificationCode("86", userPhone, verCodeText.getText().toString());//对验证码进行验证->回调函数
                     dialog = new ProgressDialog(Register.this);
                     dialog.setTitle("提示");
                     dialog.setMessage("正在注册，请稍后...");
                     dialog.setCancelable(false);
                     dialog.show();
-                    //创建子线程
+                            //创建子线程
                     new Thread(new SignUpThread()).start();
                 }
             }
@@ -138,7 +203,7 @@ public class Register extends Activity {
         alertDialog.create().show();
     }
 
-/*    private void initSDK()
+  private void initSDK()
     {
         //SMSSDK.initSDK(this, "App Key", "App Secret");
         EventHandler eventHandler = new EventHandler() {
@@ -154,61 +219,6 @@ public class Register extends Activity {
         };
         // 注册回调监听接口
         SMSSDK.registerEventHandler(eventHandler);
-    }
-    //监听函数
-    private class OnClickListener implements View.OnClickListener
-    {
-        @Override
-        public void onClick(View v) {
-            userPhone = userPhoneText.getText().toString();
-            switch (v.getId()) {
-                case R.id.register_ver_code://获取验证码
-                    new AlertDialog.Builder(Register.this)
-                            .setTitle("发送短信")
-                            .setMessage("我们将把验证码发送到以下号码:\n"+"+86:"+userPhone)
-                            .setPositiveButton("确定", new DialogInterface.OnClickListener()
-                            {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which)
-                                {
-                                    SMSSDK.getVerificationCode("86", userPhone);
-                                    registerVerCode.setClickable(false);
-                                    new Thread(new Runnable()
-                                    {
-                                        @Override
-                                        public void run()
-                                        {
-                                            for (int i = 60; i > 0; i--)
-                                            {
-                                                handler.sendEmptyMessage(CODE_ING);
-                                                if (i <= 0)
-                                                {
-                                                    break;
-                                                }
-                                                try
-                                                {
-                                                    Thread.sleep(1000);
-                                                } catch (InterruptedException e)
-                                                {
-                                                    e.printStackTrace();
-                                                }
-                                            }
-                                            handler.sendEmptyMessage(CODE_REPEAT);
-                                        }
-                                    }).start();
-                                }
-                            })
-                            .create()
-                            .show();
-                    break;
-
-                case R.id.sign_up_button://注册
-                    SMSSDK.submitVerificationCode("86", userPhone, verCodeText.getText().toString());//对验证码进行验证->回调函数
-                    break;
-                default:
-                    break;
-            }
-        }
     }
     Handler handler = new Handler()
     {
@@ -234,7 +244,7 @@ public class Register extends Activity {
                         if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE)
                         {
                             Toast.makeText(Register.this, "验证成功", Toast.LENGTH_LONG).show();
-
+                            registerButton.setClickable(true);
                         }
                         //已发送验证码
                         else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE)
@@ -265,5 +275,5 @@ public class Register extends Activity {
                     break;
             }
         }
-    };*/
+    };
 }
