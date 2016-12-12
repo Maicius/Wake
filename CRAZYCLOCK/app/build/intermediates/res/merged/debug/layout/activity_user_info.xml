@@ -12,24 +12,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="用户名: "
-        android:id="@+id/textView"
-        android:layout_alignParentStart="false"
-        android:layout_alignParentLeft="false"
-        android:layout_marginTop="67dp"
+        android:text="手机号"
+        android:id="@+id/tel"
+        android:layout_marginTop="38dp"
         android:textSize="24dp"
-        android:textColor="#0000FF" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="密码:"
-        android:id="@+id/textView4"
-        android:layout_marginTop="37dp"
-        android:textSize="24dp"
-        android:textColor="#0000FF"
-        android:layout_below="@+id/textView"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -37,11 +24,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="联系方式："
-        android:id="@+id/textView5"
+        android:text="昵称"
+        android:id="@+id/nickname"
+        android:layout_marginTop="37dp"
         android:textSize="24dp"
-        android:textColor="#0000FF"
-        android:layout_below="@+id/textView4"
+        android:layout_below="@+id/tel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="个性签名"
+        android:id="@+id/brief_intro"
+        android:textSize="24dp"
+        android:layout_below="@+id/nickname"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="35dp" />
@@ -49,46 +47,39 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/username"
+        android:id="@+id/telephone"
         android:text="111"
-        android:textColor="#00FF00"
         android:textSize="24dp"
-        android:layout_alignTop="@+id/textView"
-        android:layout_toRightOf="@+id/textView5"
-        android:layout_toEndOf="@+id/textView5"
-        android:layout_marginLeft="57dp"
-        android:layout_marginStart="57dp" />
+        android:layout_above="@+id/nickname"
+        android:layout_alignRight="@+id/button_save"
+        android:layout_alignEnd="@+id/button_save" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/password"
-        android:textColor="#00FF00"
+        android:id="@+id/info_nickname"
         android:text="111"
         android:textSize="24dp"
-        android:layout_alignTop="@+id/textView4"
-        android:layout_alignLeft="@+id/username"
-        android:layout_alignStart="@+id/username" />
+        android:layout_alignBottom="@+id/nickname"
+        android:layout_alignLeft="@+id/telephone"
+        android:layout_alignStart="@+id/telephone" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/phone"
-        android:textColor="#00FF00"
-        android:text="111111"
-        android:textSize="24dp"
-        android:layout_alignTop="@+id/textView5"
-        android:layout_alignLeft="@+id/password"
-        android:layout_alignStart="@+id/password" />
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:id="@+id/brief_intro_text"
+        android:textSize="24sp"
+        android:hint="快来设置你的个性签名吧"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_login_div_bg"
+        android:layout_below="@id/brief_intro" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="保存修改"
         android:id="@+id/button_save"
-        android:layout_marginBottom="55dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/phone"
-        android:layout_alignEnd="@+id/phone" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
 <!-- From: file:/F:/Wake/CRAZYCLOCK/app/src/main/res/layout/activity_user_info.xml -->

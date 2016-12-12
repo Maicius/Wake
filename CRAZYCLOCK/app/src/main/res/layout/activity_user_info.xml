@@ -14,11 +14,11 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="手机号"
         android:id="@+id/tel"
-        android:layout_alignParentStart="false"
-        android:layout_alignParentLeft="false"
-        android:layout_marginTop="67dp"
+        android:layout_marginTop="38dp"
         android:textSize="24dp"
-        android:textColor="#0000FF" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -28,7 +28,6 @@
         android:id="@+id/nickname"
         android:layout_marginTop="37dp"
         android:textSize="24dp"
-        android:textColor="#0000FF"
         android:layout_below="@+id/tel"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -40,7 +39,6 @@
         android:text="个性签名"
         android:id="@+id/brief_intro"
         android:textSize="24dp"
-        android:textColor="#0000FF"
         android:layout_below="@+id/nickname"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -51,42 +49,36 @@
         android:layout_height="wrap_content"
         android:id="@+id/telephone"
         android:text="111"
-        android:textColor="#00FF00"
         android:textSize="24dp"
-        android:layout_alignTop="@+id/tel"
-        android:layout_toRightOf="@+id/brief_intro"
-        android:layout_toEndOf="@+id/brief_intro"
-        android:layout_marginLeft="57dp"
-        android:layout_marginStart="57dp" />
+        android:layout_above="@+id/nickname"
+        android:layout_alignRight="@+id/button_save"
+        android:layout_alignEnd="@+id/button_save" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/info_nickname"
-        android:textColor="#00FF00"
         android:text="111"
         android:textSize="24dp"
-        android:layout_alignTop="@+id/nickname"
+        android:layout_alignBottom="@+id/nickname"
         android:layout_alignLeft="@+id/telephone"
         android:layout_alignStart="@+id/telephone" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/biref_intro"
-        android:textColor="#00FF00"
-        android:textSize="24dp"
-        android:layout_alignTop="@+id/brief_intro"
-        android:layout_alignLeft="@+id/info_nickname"
-        android:layout_alignStart="@+id/info_nickname" />
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:id="@+id/brief_intro_text"
+        android:textSize="24sp"
+        android:hint="快来设置你的个性签名吧"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_login_div_bg"
+        android:layout_below="@id/brief_intro" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="保存修改"
         android:id="@+id/button_save"
-        android:layout_marginBottom="55dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/biref_intro"
-        android:layout_alignEnd="@+id/biref_intro" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

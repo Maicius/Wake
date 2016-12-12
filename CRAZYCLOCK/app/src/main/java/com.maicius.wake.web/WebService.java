@@ -24,7 +24,7 @@ public class WebService extends Activity{
         GetUserInfo
     }
     // IP地址
-    private static String IP = "116.62.41.211:8080";
+    private static String IP = "172.19.14.6:8080";
     /**
      * DoGet
      */
@@ -68,7 +68,8 @@ public class WebService extends Activity{
      */
     public static String executeHttpGet(String username, String password, State state) {
         String path;
-        path = "http://" + IP + "/LogLet";
+        path = "http://" + IP +"/HelloWeb/LogLet";
+        //path = "http://" + IP + "/LogLet";
         path = path + "?username=" + username + "&password=" + password;
         return doHttpGet(path);
     }
@@ -79,7 +80,8 @@ public class WebService extends Activity{
     public static String executeHttpGet(String username, String password,
                                         String nickname, State state){
             String path;
-            path = "http://" + IP + "/LogLet";
+            path = "http://" + IP + "HelloWeb/RegLet";
+            //path = "http://" + IP + "/RegLet";
             path = path + "?username=" + username + "&password=" + password+"&nickname="+nickname;
             return doHttpGet(path);
     }
@@ -88,7 +90,8 @@ public class WebService extends Activity{
      */
     public static String executeHttpGet(long date, State state) {
 
-            String path = "http://" + IP + "/GetUpTime";
+            String path = "http://" + IP + "HelloWeb/GetUpTime";
+            //String path = "http://" + IP + "/GetUpTime";
             path = path + "?username=" + MainActivity.s_userName + "&date=" + String.valueOf(date);
             return doHttpGet(path);
 
@@ -96,31 +99,29 @@ public class WebService extends Activity{
 
     public static String executeHttpGet(String username, State state) {
 
-        HttpURLConnection conn = null;
-        InputStream is = null;
             // URL 地址
         String path = "";
         switch (state) {
             case GetTimeList:
-                //path = "http://" + IP + "/HelloWeb/TimeHistory";
-                path = "http://" + IP + "/TimeHistory";
+                path = "http://" + IP + "/HelloWeb/TimeHistory";
+                //path = "http://" + IP + "/TimeHistory";
                 break;
             case GetUserInfo:
-                //path = "http://" + IP + "/HelloWeb/GetUserInfo";
-                path = "http://" + IP + "/GetUserInfo";
+                path = "http://" + IP + "/HelloWeb/GetUserInfo";
+                //path = "http://" + IP + "/GetUserInfo";
                 break;
             }
-        path = path + "?username=" + MainActivity.s_userName;
+        path = path + "?username=" + username;
         Log.v("sss", path);
         return doHttpGet(path);
     }
 
-    public static String executeHttpGet(String username, String password, String phone) {
-            String path = "";
-            //path = "http://" + IP + "/HelloWeb/SetUserInfo";
-            path = "http://" + IP + "/SetUserInfo";
-            path = path + "?username=" + username + "&password=" + password + "&phone=" + phone;
-            Log.v("sss", path);
+    public static String executeHttpGet(String username, String nickname, String brief_intro) {
+        String path;
+        path = "http://" + IP + "/HelloWeb/SetUserInfo";
+        //path = "http://" + IP + "/SetUserInfo";
+        path = path + "?username=" + username + "&nickname=" + nickname + "&brief_intro=" + brief_intro;
+        Log.v("sss", path);
         return doHttpGet(path);
     }
 

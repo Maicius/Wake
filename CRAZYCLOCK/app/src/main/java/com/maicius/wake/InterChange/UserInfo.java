@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.StringTokenizer;
 
@@ -38,7 +39,7 @@ public class UserInfo extends Activity {
     private void mInitUI() {
         m_telephone = (EditText) findViewById(R.id.telephone);
         m_info_nickname = (EditText) findViewById(R.id.info_nickname);
-        m_brief_intro = (EditText) findViewById(R.id.biref_intro);
+        m_brief_intro = (EditText) findViewById(R.id.brief_intro_text);
         m_button = (Button) findViewById(R.id.button_save);
         m_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -67,12 +68,9 @@ public class UserInfo extends Activity {
             m_handler.post(new Runnable() {
                 @Override
                 public void run() {
-                    // 最好返回一个固定键值，根据键值判断是否登陆成功，有键值就保存该info跳转，没键值就是错误信息直接toast
-
                     m_proDialog.dismiss();
 
                     if (m_info.equals("failed")) {
-
                         AlertDialog.Builder alertDialog = new AlertDialog.Builder(UserInfo.this);
                         alertDialog.setTitle("提示").setMessage("获取个人信息失败！");
                         alertDialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
@@ -101,7 +99,7 @@ public class UserInfo extends Activity {
     public class UpdateInfo implements Runnable {
         @Override
         public void run() {
-            m_saveInfo = WebService.executeHttpGet(MainActivity.s_userName,m_info_nickname.getText().toString(),
+            m_saveInfo = WebService.executeHttpGet(m_telephone.getText().toString(),m_info_nickname.getText().toString(),
                     m_brief_intro.getText().toString());
             Log.v("sss", "login:" + m_saveInfo);
             m_handler.post(new Runnable() {

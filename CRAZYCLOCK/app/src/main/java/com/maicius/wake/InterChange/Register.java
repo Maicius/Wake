@@ -30,7 +30,7 @@ public class Register extends Activity {
     private static final int CODE_ING = 1;   //已发送，倒计时
     private static final int CODE_REPEAT = 2;  //重新发送
     private static final int SMSDDK_HANDLER = 3;  //短信回调
-    private int TIME = 60;//倒计时60s
+    //private int TIME = 60;//倒计时60s
     private String info;
     private ProgressDialog dialog;
     EditText userPhoneText, passwordText, nicknameText, verCodeText;
@@ -135,12 +135,9 @@ public class Register extends Activity {
                         || passwordText.getText().toString().length()>16){
                     raiseAlertDialog("提示","密码长度必须在6-16位之间");
                 }
-                else if(verCodeText.getText().toString().equals("")){
-                    raiseAlertDialog("提示","请输入正确的验证码");
-                }
                 else{
                     SMSSDK.submitVerificationCode("86", userPhone, verCodeText.getText().toString());//对验证码进行验证->回调函数
-                    if(getVerCodeCorrect == true) {
+                    if(getVerCodeCorrect) {
                         dialog = new ProgressDialog(Register.this);
                         dialog.setTitle("提示");
                         dialog.setMessage("正在注册，请稍后...");
@@ -168,7 +165,6 @@ public class Register extends Activity {
                 public void run() {
                     // 最好返回一个固定键值，根据键值判断是否登陆成功，有键值就保存该info跳转，没键值就是错误信息直接toast
                     dialog.dismiss();
-
                     if (info.equals("success")) {
                         AlertDialog.Builder alertDialog = new AlertDialog.Builder(Register.this);
                         alertDialog.setTitle("注册成功").setMessage("欢迎来到Wake！");
@@ -231,6 +227,7 @@ public class Register extends Activity {
             switch (msg.what)
             {
                 case CODE_ING://已发送,倒计时
+                    int TIME = 60;
                     registerVerCode.setText("重新发送("+--TIME+"s)");
                     break;
                 case CODE_REPEAT://重新发送
@@ -250,11 +247,12 @@ public class Register extends Activity {
                         {
                             getVerCodeCorrect = true;
                             Toast.makeText(Register.this, "验证成功", Toast.LENGTH_LONG).show();
-                            registerButton.setClickable(true);
+
                         }
                         //已发送验证码
                         else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE)
                         {
+                            getVerCodeCorrect = true;
                             Toast.makeText(getApplicationContext(), "验证码已经发送",
                                     Toast.LENGTH_SHORT).show();
                         } else

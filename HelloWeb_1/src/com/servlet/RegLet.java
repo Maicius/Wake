@@ -30,6 +30,7 @@ public class RegLet extends HttpServlet {
 		username = new String(username.getBytes("ISO-8859-1"), "UTF-8");
 		String password = request.getParameter("password");
 		String nickname = request.getParameter("nickname");
+		nickname = new String(nickname.getBytes("ISO-8859-1"), "UTF-8");
 		// 返回信息
 				response.setCharacterEncoding("UTF-8");
 				response.setContentType("text/html");
