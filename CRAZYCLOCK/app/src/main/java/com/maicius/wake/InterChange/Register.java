@@ -163,7 +163,7 @@ public class Register extends Activity {
             handler.post(new Runnable() {
                 @Override
                 public void run() {
-                    // 最好返回一个固定键值，根据键值判断是否登陆成功，有键值就保存该info跳转，没键值就是错误信息直接toast
+
                     dialog.dismiss();
                     if (info.equals("success")) {
                         AlertDialog.Builder alertDialog = new AlertDialog.Builder(Register.this);

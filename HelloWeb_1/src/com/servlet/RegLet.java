@@ -27,15 +27,20 @@ public class RegLet extends HttpServlet {
 		
 		// 接收注册信息
 		String username = request.getParameter("username");
+		System.out.println(username);
 		username = new String(username.getBytes("ISO-8859-1"), "UTF-8");
+		System.out.println("UTF-8:"+username);
 		String password = request.getParameter("password");
+		System.out.println(password);
 		String nickname = request.getParameter("nickname");
+		System.out.println("昵称"+nickname);
 		nickname = new String(nickname.getBytes("ISO-8859-1"), "UTF-8");
+		System.out.println("UTF-8昵称"+nickname);
 		// 返回信息
 				response.setCharacterEncoding("UTF-8");
 				response.setContentType("text/html");
 				PrintWriter out = response.getWriter();
-				
+		
 		// 验证处理
 		boolean reged = serv.register(username,password,nickname);
 		if (reged) {
