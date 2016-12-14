@@ -180,7 +180,7 @@ public Boolean setUserInfo(String username, String nickname, String brief_intro)
 	
 	private Boolean checkName(String _name)
 	{
-		String checksql ="select * from appuser where username ="+"'"+_name+"'";
+		String checksql ="select * from appuser where username ='"+_name+"'";
 		
 		// 获取DB对象
 		DBManager sql = DBManager.createInstance();

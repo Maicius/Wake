@@ -94,7 +94,8 @@
             android:textSize="15dp"
             android:text="@string/login_label_sign_up"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true" />
 
 
 

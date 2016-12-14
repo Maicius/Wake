@@ -34,7 +34,7 @@ public class Register extends Activity {
     private String info;
     private ProgressDialog dialog;
     EditText userPhoneText, passwordText, nicknameText, verCodeText;
-    String userPhone, password;
+    String userPhone, password, nickname;
     Button registerVerCode;
     Button registerButton;
     static boolean getVerCodeCorrect = false;
@@ -52,8 +52,9 @@ public class Register extends Activity {
         registerVerCode = (Button)findViewById(R.id.register_ver_code);
         verCodeText = (EditText) findViewById(R.id.ver_code_text);
 
+
         initSDK();
-        registerButton.setEnabled(false);
+        registerButton.setEnabled(true);
         Login.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 LogIn();
@@ -62,6 +63,8 @@ public class Register extends Activity {
         registerVerCode.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 userPhone = userPhoneText.getText().toString();
+                password = passwordText.getText().toString();
+                nickname =nicknameText.getText().toString();
                 if (userPhoneText.getText().toString().equals("")){
                     raiseAlertDialog("提示","手机号不能为空");
                 }
@@ -76,7 +79,6 @@ public class Register extends Activity {
                         || passwordText.getText().toString().length()>16){
                     raiseAlertDialog("提示","密码长度必须在6-16位之间");
                 }
-
                 else{
                     new AlertDialog.Builder(Register.this)
                             .setTitle("发送短信")
@@ -121,10 +123,14 @@ public class Register extends Activity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (userPhoneText.getText().toString().equals("")){
+                userPhone = userPhoneText.getText().toString();
+                password = passwordText.getText().toString();
+                nickname =nicknameText.getText().toString();
+
+                if (userPhone.equals("")){
                     raiseAlertDialog("提示","手机号不能为空");
                 }
-                else if(!isUserName(userPhoneText.getText().toString())){
+                else if(!isUserName(userPhone)){
                     raiseAlertDialog("提示","不能识别的手机号码");
 
                 }
@@ -156,10 +162,7 @@ public class Register extends Activity {
 
     public class SignUpThread implements Runnable {
         public void run() {
-            info = WebService.executeHttpGet(userPhoneText.getText().toString(),
-                    passwordText.getText().toString(),
-                    nicknameText.getText().toString(),
-                    WebService.State.Register);
+            info = WebService.executeHttpGet(userPhone, password, nickname, WebService.State.Register);
             handler.post(new Runnable() {
                 @Override
                 public void run() {
@@ -178,7 +181,7 @@ public class Register extends Activity {
                         alertDialog.create().show();
 
                     }
-                    else if (info.equals("failed")) {
+                    else{
                         raiseAlertDialog("注册信息","Sorry, 注册失败");
                     }
                 }
@@ -252,7 +255,6 @@ public class Register extends Activity {
                         //已发送验证码
                         else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE)
                         {
-                            getVerCodeCorrect = true;
                             Toast.makeText(getApplicationContext(), "验证码已经发送",
                                     Toast.LENGTH_SHORT).show();
                         } else
