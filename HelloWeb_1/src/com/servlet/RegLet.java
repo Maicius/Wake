@@ -2,6 +2,8 @@ package com.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,7 +26,7 @@ public class RegLet extends HttpServlet {
 		
 		// 新建服务对象
 		Service serv = new Service();
-		
+		String nickname="";
 		// 接收注册信息
 		String username = request.getParameter("username");
 		System.out.println(username);
@@ -32,7 +34,12 @@ public class RegLet extends HttpServlet {
 		System.out.println("UTF-8:"+username);
 		String password = request.getParameter("password");
 		System.out.println(password);
-		String nickname = request.getParameter("nickname");
+		try{
+		String nicknameUTF8 = request.getParameter("nickname");
+		nickname = URLDecoder.decode(nicknameUTF8,"UTF-8");
+		}catch(UnsupportedEncodingException e){
+            e.printStackTrace();
+        }
 		System.out.println("昵称"+nickname);
 		nickname = new String(nickname.getBytes("ISO-8859-1"), "UTF-8");
 		System.out.println("UTF-8昵称"+nickname);

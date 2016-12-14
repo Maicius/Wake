@@ -12,8 +12,10 @@ import com.maicius.wake.web.ConnectionDetector;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 
 public class WebService extends Activity{
     public enum State {
@@ -25,6 +27,7 @@ public class WebService extends Activity{
     }
     // IP地址
     private static String IP = "116.62.41.211:8080";
+    ConnectionDetector connectionDetector;
     /**
      * DoGet
      */
@@ -78,11 +81,15 @@ public class WebService extends Activity{
      * 注册
      */
     public static String executeHttpGet(String username, String password,
-                                        String nickname, State state){
+                                        String nickname, State state) {
             String path;
             //path = "http://" + IP + "HelloWeb/RegLet";
             path = "http://" + IP + "/RegLet";
-            path = path + "?username=" + username + "&password=" + password+"&nickname="+nickname;
+            try {
+                path = path + "?username=" + username + "&password=" + password + "&nickname=" + URLEncoder.encode(nickname, "UTF-8");
+            }catch(UnsupportedEncodingException e){
+                e.printStackTrace();
+            }
             return doHttpGet(path);
     }
     /**
@@ -120,8 +127,12 @@ public class WebService extends Activity{
         String path;
         //path = "http://" + IP + "/HelloWeb/SetUserInfo";
         path = "http://" + IP + "/SetUserInfo";
-        path = path + "?username=" + username + "&nickname=" + nickname + "&brief_intro=" + brief_intro;
-        Log.v("sss", path);
+        try {
+            path = path + "?username=" + username + "&nickname=" + URLEncoder.encode(nickname, "UTF-8") + "&brief_intro=" + URLEncoder.encode(brief_intro, "UTF-8");
+            Log.v("sss", path);
+        }catch(UnsupportedEncodingException e){
+            e.printStackTrace();
+        }
         return doHttpGet(path);
     }
 

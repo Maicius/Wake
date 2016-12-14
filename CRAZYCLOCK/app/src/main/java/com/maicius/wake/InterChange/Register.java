@@ -127,34 +127,25 @@ public class Register extends Activity {
                 password = passwordText.getText().toString();
                 nickname =nicknameText.getText().toString();
 
-                if (userPhone.equals("")){
-                    raiseAlertDialog("提示","手机号不能为空");
-                }
-                else if(!isUserName(userPhone)){
+                if(!isUserName(userPhone)){
                     raiseAlertDialog("提示","不能识别的手机号码");
 
-                }
-                else if (passwordText.getText().toString().equals("")) {
-                    raiseAlertDialog("提示","密码不能为空");
                 }
                 else if(passwordText.getText().toString().length()<6
                         || passwordText.getText().toString().length()>16){
                     raiseAlertDialog("提示","密码长度必须在6-16位之间");
                 }
                 else{
-                    SMSSDK.submitVerificationCode("86", userPhone, verCodeText.getText().toString());//对验证码进行验证->回调函数
-                    if(getVerCodeCorrect) {
-                        dialog = new ProgressDialog(Register.this);
-                        dialog.setTitle("提示");
-                        dialog.setMessage("正在注册，请稍后...");
-                        dialog.setCancelable(false);
-                        dialog.show();
+                    //SMSSDK.submitVerificationCode("86", userPhone, verCodeText.getText().toString());//对验证码进行验证->回调函数
+                    dialog = new ProgressDialog(Register.this);
+                    dialog.setTitle("提示");
+                    dialog.setMessage("正在注册，请稍后...");
+                    dialog.setCancelable(false);
+                    dialog.show();
                         //创建子线程
+                    //if(getVerCodeCorrect) {
                         new Thread(new SignUpThread()).start();
-                    }
-                    else{
-                        raiseAlertDialog("提示","请输入正确的验证码");
-                    }
+                    //}
                 }
             }
         });
@@ -255,15 +246,18 @@ public class Register extends Activity {
                         //已发送验证码
                         else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE)
                         {
+
                             Toast.makeText(getApplicationContext(), "验证码已经发送",
                                     Toast.LENGTH_SHORT).show();
                         } else
                         {
+                            dialog.dismiss();
                             ((Throwable) data).printStackTrace();
                         }
                     }
                     if(result==SMSSDK.RESULT_ERROR)
                     {
+                        dialog.dismiss();
                         try {
                             Throwable throwable = (Throwable) data;
                             throwable.printStackTrace();
