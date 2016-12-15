@@ -27,6 +27,11 @@ import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
 
 public class Register extends Activity {
+    private enum checkState{
+        sendCode,
+        checkRight,
+        checkFalse;
+    }
     private static final int CODE_ING = 1;   //已发送，倒计时
     private static final int CODE_REPEAT = 2;  //重新发送
     private static final int SMSDDK_HANDLER = 3;  //短信回调
@@ -38,6 +43,7 @@ public class Register extends Activity {
     Button registerVerCode;
     Button registerButton;
     static boolean getVerCodeCorrect = false;
+    checkState checkCodeCorrect;
     //private static Handler handler = new Handler();
 
     public void onCreate(Bundle savedInstanceState) {
@@ -54,7 +60,7 @@ public class Register extends Activity {
 
 
         initSDK();
-        registerButton.setEnabled(true);
+        registerButton.setEnabled(false);
         Login.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 LogIn();
@@ -136,16 +142,22 @@ public class Register extends Activity {
                     raiseAlertDialog("提示","密码长度必须在6-16位之间");
                 }
                 else{
-                    //SMSSDK.submitVerificationCode("86", userPhone, verCodeText.getText().toString());//对验证码进行验证->回调函数
-                    dialog = new ProgressDialog(Register.this);
-                    dialog.setTitle("提示");
-                    dialog.setMessage("正在注册，请稍后...");
-                    dialog.setCancelable(false);
-                    dialog.show();
+                    SMSSDK.submitVerificationCode("86", userPhone, verCodeText.getText().toString());
+                    while(checkCodeCorrect!=checkState.checkRight){
+                        if(checkCodeCorrect == checkState.checkFalse)
+                            break;
+                    }
+                    if(checkCodeCorrect==checkState.checkRight) {
+                        dialog = new ProgressDialog(Register.this);
+                        dialog.setTitle("提示");
+                        dialog.setMessage("正在注册，请稍后...");
+                        dialog.setCancelable(false);
+                        dialog.show();
                         //创建子线程
-                    //if(getVerCodeCorrect) {
+                        //if(getVerCodeCorrect) {
                         new Thread(new SignUpThread()).start();
-                    //}
+                        //}
+                    }
                 }
             }
         });
@@ -235,11 +247,13 @@ public class Register extends Activity {
                     //回调完成
                     if (result == SMSSDK.RESULT_COMPLETE)
                     {
+                        checkCodeCorrect = checkState.sendCode;
                         registerButton.setEnabled(true);
                         //验证码验证成功
                         if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE)
                         {
                             getVerCodeCorrect = true;
+                            checkCodeCorrect = checkState.checkRight;
                             Toast.makeText(Register.this, "验证成功", Toast.LENGTH_LONG).show();
 
                         }
@@ -252,6 +266,7 @@ public class Register extends Activity {
                         } else
                         {
                             dialog.dismiss();
+                            checkCodeCorrect = checkState.checkFalse;
                             ((Throwable) data).printStackTrace();
                         }
                     }
