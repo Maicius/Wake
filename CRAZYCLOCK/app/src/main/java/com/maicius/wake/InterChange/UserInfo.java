@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import java.util.StringTokenizer;
 
@@ -37,7 +36,7 @@ public class UserInfo extends Activity {
     }
 
     private void mInitUI() {
-        m_telephone = (EditText) findViewById(R.id.telephone);
+        m_telephone = (EditText) findViewById(R.id.info_telephone);
         m_info_nickname = (EditText) findViewById(R.id.info_nickname);
         m_brief_intro = (EditText) findViewById(R.id.brief_intro_text);
         m_button = (Button) findViewById(R.id.button_save);
@@ -87,6 +86,10 @@ public class UserInfo extends Activity {
                         String telephone = st.nextToken();
                         String info_nickname = st.nextToken();
                         String brief_intro = st.nextToken();
+                        if(brief_intro.equals("null"))
+                        {
+                            brief_intro ="";
+                        }
                         m_telephone.setText(telephone);
                         m_info_nickname.setText(info_nickname);
                         m_brief_intro.setText(brief_intro);

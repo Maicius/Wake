@@ -20,6 +20,8 @@ import com.maicius.wake.alarmClock.MainActivity;
 import com.maicius.wake.alarmClock.R;
 import com.maicius.wake.web.WebService;
 
+import java.util.StringTokenizer;
+
 public class LogIn extends Activity {
     //创建等待框
     private ProgressDialog dialog;
@@ -68,18 +70,8 @@ public class LogIn extends Activity {
             handler.post(new Runnable() {
                 @Override
                 public void run() {
-                    // 最好返回一个固定键值，根据键值判断是否登陆成功，有键值就保存该info跳转，没键值就是错误信息直接toast
-
                     dialog.dismiss();
-
-                    if (info.equals("success")) {
-                        Log.v("sss", "start user space!");
-                        MainActivity.s_userName = username.getText().toString();
-                        MainActivity.s_isLogged = true;
-                        startActivity(new Intent(LogIn.this, UserSpace.class));
-                        LogIn.this.finish();
-
-                    } else if (info.equals("failed")) {
+                    if (info.equals("failed")) {
                         AlertDialog.Builder alertDialog = new AlertDialog.Builder(LogIn.this);
                         alertDialog.setTitle("登陆信息").setMessage("登陆失败：用户名或密码错误！");
                         alertDialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
@@ -89,6 +81,19 @@ public class LogIn extends Activity {
                             }
                         });
                         alertDialog.create().show();
+                    } else {
+                        StringTokenizer st = new StringTokenizer(info, "#");
+                        String info_success = st.nextToken();
+                        String info_nickname = st.nextToken();
+                        if (info_success.equals("success")) {
+                            Log.v("sss", "start user space!");
+                            MainActivity.s_nickname = info_nickname;
+                            MainActivity.s_userName=username.getText().toString();
+                            MainActivity.s_isLogged = true;
+                            startActivity(new Intent(LogIn.this, UserSpace.class));
+                            LogIn.this.finish();
+                        }
+
                     }
                 }
             });

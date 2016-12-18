@@ -471,7 +471,7 @@
     <string name="alarm_volume_title">"闹钟音量"</string>
     <string name="alert">"铃声"</string>
     <string name="analog_gadget">"模拟时钟"</string>
-    <string name="app_name">CrazyClock</string>
+    <string name="app_name">WAKE</string>
     <string name="clock_instructions">"选择要显示的时钟。"</string>
     <string name="day">"1 天"</string>
     <string name="day_concat">", "</string>
@@ -493,6 +493,10 @@
     <string name="hello">Hello World, ClockMainActivity!</string>
     <string name="hour">"1 小时"</string>
     <string msgid="2071487018566991613" name="hours">"<ns1:g id="HOURS">%s</ns1:g> 小时"</string>
+    <string name="info_brief_intro_hint">快来设置你的个性签名吧</string>
+    <string name="info_brief_intro_text">个性签名</string>
+    <string name="info_nickname_text">昵称</string>
+    <string name="info_phone_text">手机号</string>
     <string name="label">"标签"</string>
     <string name="log_in_hint">"您的手机号"</string>
     <string name="log_in_name">"账号"</string>

@@ -12,6 +12,8 @@ public class Service {
 	public Boolean login(String username, String password) {
 
 		// 获取Sql查询语句
+		userinfo="";
+		String nickname="";
 		String logSql = "select * from appuser where username ='" + username
 				+ "' and password ='" + password + "'";
 
@@ -21,8 +23,10 @@ public class Service {
 
 		// 操作DB对象
 		try {
-			ResultSet rs = sql.executeQuery(logSql);
+			ResultSet rs= sql.executeQuery(logSql);
 			if (rs.next()) {
+				nickname = rs.getString("nickname");
+				userinfo="success"+"#"+nickname;
 				sql.closeDB();
 				return true;
 			}

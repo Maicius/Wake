@@ -42,7 +42,7 @@ public class LogLet extends HttpServlet {
 			System.out.print("Succss in Login");
 			request.getSession().setAttribute("username", username);
 			// response.sendRedirect("welcome.jsp");
-			 out.print("success");
+			 out.print(serv.userinfo);	
 		} else {
 			 out.print("failed");
 		}

@@ -40,9 +40,9 @@ import cn.smssdk.SMSSDK;
 public class MainActivity extends Activity implements OnItemClickListener {
 
     static final String PREFERENCES = "AlarmClock";
-    public static String s_userName = "sxf";
+    public static String s_userName = "18996720676";
     public static Boolean s_isLogged = false;
-
+    public static String s_nickname = "maicius";
     /**
      * This must be false for production.  If true, turns on logging,
      * test code, etc.

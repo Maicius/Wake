@@ -21,6 +21,7 @@ import com.maicius.wake.web.WebService;
 
 import org.json.JSONObject;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import cn.smssdk.EventHandler;
@@ -78,6 +79,9 @@ public class Register extends Activity {
                         || passwordText.getText().toString().length()>16){
                     raiseAlertDialog("提示","密码长度必须在6-16位之间");
                 }
+                else if(isContainChinese(nicknameText.getText().toString())){
+                    raiseAlertDialog("提示","sorry,暂不支持中文");
+                }
                 else{
                     new AlertDialog.Builder(Register.this)
                             .setTitle("发送短信")
@@ -128,7 +132,6 @@ public class Register extends Activity {
 
                 if(!isUserName(userPhone)){
                     raiseAlertDialog("提示","不能识别的手机号码");
-
                 }
                 else if(passwordText.getText().toString().length()<6
                         || passwordText.getText().toString().length()>16){
@@ -136,6 +139,9 @@ public class Register extends Activity {
                 }else if(verCodeText.getText().toString().length() != 4)
                 {
                     raiseAlertDialog("提示","请输入4位验证码");
+                }
+                else if(isContainChinese(nicknameText.getText().toString())){
+                    raiseAlertDialog("提示","sorry,暂不支持中文");
                 }
                 else{
                     SMSSDK.submitVerificationCode("86", userPhone, verCodeText.getText().toString());
@@ -182,6 +188,15 @@ public class Register extends Activity {
     }
     private boolean isUserName(String username){
         return Pattern.matches("[1][3578]\\d{9}", username);
+    }
+    public static boolean isContainChinese(String str) {
+
+        Pattern p = Pattern.compile("[\u4e00-\u9fa5]");
+        Matcher m = p.matcher(str);
+        if (m.find()) {
+            return true;
+        }
+        return false;
     }
 
     private void raiseAlertDialog(String title, String message){
