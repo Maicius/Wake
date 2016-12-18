@@ -27,23 +27,16 @@ import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
 
 public class Register extends Activity {
-    private enum checkState{
-        sendCode,
-        checkRight,
-        checkFalse;
-    }
     private static final int CODE_ING = 1;   //已发送，倒计时
     private static final int CODE_REPEAT = 2;  //重新发送
     private static final int SMSDDK_HANDLER = 3;  //短信回调
-    //private int TIME = 60;//倒计时60s
+    private int TIME = 60;//倒计时60s
     private String info;
     private ProgressDialog dialog;
     EditText userPhoneText, passwordText, nicknameText, verCodeText;
     String userPhone, password, nickname;
     Button registerVerCode;
     Button registerButton;
-    static boolean getVerCodeCorrect = false;
-    checkState checkCodeCorrect;
     //private static Handler handler = new Handler();
 
     public void onCreate(Bundle savedInstanceState) {
@@ -140,24 +133,17 @@ public class Register extends Activity {
                 else if(passwordText.getText().toString().length()<6
                         || passwordText.getText().toString().length()>16){
                     raiseAlertDialog("提示","密码长度必须在6-16位之间");
+                }else if(verCodeText.getText().toString().length() != 4)
+                {
+                    raiseAlertDialog("提示","请输入4位验证码");
                 }
                 else{
                     SMSSDK.submitVerificationCode("86", userPhone, verCodeText.getText().toString());
-                    while(checkCodeCorrect!=checkState.checkRight){
-                        if(checkCodeCorrect == checkState.checkFalse)
-                            break;
-                    }
-                    if(checkCodeCorrect==checkState.checkRight) {
-                        dialog = new ProgressDialog(Register.this);
-                        dialog.setTitle("提示");
-                        dialog.setMessage("正在注册，请稍后...");
-                        dialog.setCancelable(false);
-                        dialog.show();
-                        //创建子线程
-                        //if(getVerCodeCorrect) {
-                        new Thread(new SignUpThread()).start();
-                        //}
-                    }
+                    dialog = new ProgressDialog(Register.this);
+                    dialog.setTitle("提示");
+                    dialog.setMessage("正在注册，请稍后...");
+                    dialog.setCancelable(false);
+                    dialog.show();
                 }
             }
         });
@@ -185,7 +171,7 @@ public class Register extends Activity {
 
                     }
                     else{
-                        raiseAlertDialog("注册信息","Sorry, 注册失败");
+                        raiseAlertDialog("注册信息","Sorry,注册失败");
                     }
                 }
             });
@@ -233,7 +219,7 @@ public class Register extends Activity {
             switch (msg.what)
             {
                 case CODE_ING://已发送,倒计时
-                    int TIME = 60;
+                    //int TIME = 60;
                     registerVerCode.setText("重新发送("+--TIME+"s)");
                     break;
                 case CODE_REPEAT://重新发送
@@ -247,15 +233,12 @@ public class Register extends Activity {
                     //回调完成
                     if (result == SMSSDK.RESULT_COMPLETE)
                     {
-                        checkCodeCorrect = checkState.sendCode;
                         registerButton.setEnabled(true);
                         //验证码验证成功
                         if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE)
                         {
-                            getVerCodeCorrect = true;
-                            checkCodeCorrect = checkState.checkRight;
-                            Toast.makeText(Register.this, "验证成功", Toast.LENGTH_LONG).show();
-
+                            //Toast.makeText(Register.this, "验证成功", Toast.LENGTH_LONG).show();
+                            new Thread(new SignUpThread()).start();
                         }
                         //已发送验证码
                         else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE)
@@ -266,7 +249,6 @@ public class Register extends Activity {
                         } else
                         {
                             dialog.dismiss();
-                            checkCodeCorrect = checkState.checkFalse;
                             ((Throwable) data).printStackTrace();
                         }
                     }
