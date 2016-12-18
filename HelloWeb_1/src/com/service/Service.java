@@ -103,7 +103,7 @@ public class Service {
 		try {
 			ResultSet rs = sql.executeQuery(SqlQuery);
 			while (rs.next()) {
-				String tmp=rs.getString("time").substring(0, 19)+"#" ;
+				String tmp=rs.getString("up_time").substring(0, 19)+"#" ;
 				timeList+=tmp;
 			}
 			sql.closeDB();

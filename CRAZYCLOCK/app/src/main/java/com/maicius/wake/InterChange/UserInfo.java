@@ -86,10 +86,6 @@ public class UserInfo extends Activity {
                         String telephone = st.nextToken();
                         String info_nickname = st.nextToken();
                         String brief_intro = st.nextToken();
-                        if(brief_intro.equals("null"))
-                        {
-                            brief_intro ="";
-                        }
                         m_telephone.setText(telephone);
                         m_info_nickname.setText(info_nickname);
                         m_brief_intro.setText(brief_intro);
