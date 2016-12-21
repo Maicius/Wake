@@ -32,6 +32,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.maicius.wake.DBmanager.Appuser;
+import com.maicius.wake.DBmanager.DBManager;
 import com.maicius.wake.InterChange.LogIn;
 import com.maicius.wake.InterChange.UserSpace;
 
@@ -53,10 +55,11 @@ public class MainActivity extends Activity implements OnItemClickListener {
     private LayoutInflater mFactory;  //加载布局文件
     private ListView mAlarmsList;
     private Cursor mCursor;
-
+    private DBManager dbManager;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //初始化Mob SDK
         SMSSDK.initSDK(this, "19c7040399c28", "d841bc898669f9aaf419bc4f6d1ec8a6");
         //取自定义布局的LayoutInflater
         mFactory = LayoutInflater.from(this);
@@ -64,7 +67,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
         mPrefs = getSharedPreferences(PREFERENCES, 0);
         //获取闹钟的cursor
         mCursor = Alarms.getAlarmsCursor(getContentResolver());
-
+        dbManager = new DBManager(MainActivity.this);
         //更新布局界面
         updateLayout();
 
@@ -120,6 +123,15 @@ public class MainActivity extends Activity implements OnItemClickListener {
      */
     private void SignIn() {
         if (!s_isLogged) {
+
+            Cursor rs = dbManager.query();
+            if(rs.getCount()==1) {
+                Appuser user = new Appuser();
+                MainActivity.s_userName = user.sqlusername;
+                MainActivity.s_nickname = user.sqlnickname;
+                s_isLogged = true;
+                startActivity(new Intent(this, UserSpace.class));
+            }
             startActivity(new Intent(this, LogIn.class));
         } else {
             startActivity(new Intent(this, UserSpace.class));
@@ -323,7 +335,6 @@ public class MainActivity extends Activity implements OnItemClickListener {
                 startActivity(new Intent(this, SettingsActivity.class));
                 return true;
             case R.id.menu_item_desk_clock:
-                //modify by wangxianming in 2012-4-14
 //                startActivity(new Intent(this, DeskClock.class));
                 return true;
             case R.id.menu_item_add_alarm:
@@ -371,5 +382,6 @@ public class MainActivity extends Activity implements OnItemClickListener {
         Log.v("maicius", "Notification is set");
         ToastMaster.cancelToast();
         mCursor.close();
+        dbManager.close();
     }
 }

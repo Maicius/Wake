@@ -11,15 +11,17 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.maicius.wake.DBmanager.DBManager;
 import com.maicius.wake.alarmClock.MainActivity;
 import com.maicius.wake.alarmClock.R;
 
 public class UserSpace extends Activity {
+    DBManager dbManager = new DBManager(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.v("sss", "******************enter user space!");
+        Log.v("sss", "******************enter Appuser space!");
         setContentView(R.layout.user_space);
 
         mInitUI();
@@ -48,6 +50,7 @@ public class UserSpace extends Activity {
             public void onClick(View v) {
                 MainActivity.s_isLogged=false;
                 UserSpace.this.finish();
+                dbManager.deleteAppuser();
             }
         });
     }

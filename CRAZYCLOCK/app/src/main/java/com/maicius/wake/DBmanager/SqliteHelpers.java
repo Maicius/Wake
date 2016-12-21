@@ -1,7 +1,7 @@
 /**
  * SqliteHelpers
  */
-package com.maicius.wake.alarmClock;
+package com.maicius.wake.DBmanager;
 import android.content.ContentProvider;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -15,6 +15,8 @@ import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
+
+import com.maicius.wake.alarmClock.Alarm;
 
 public class SqliteHelpers extends ContentProvider {
     private SQLiteOpenHelper mOpenHelper;

@@ -43,8 +43,6 @@ public class Notification extends Activity {
                 proDialog.show();
                 //创建子线程
                 new Thread(new MyThread()).start();
-
-
                 Notification.this.finish();
             }
         });
