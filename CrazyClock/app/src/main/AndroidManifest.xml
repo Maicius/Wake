@@ -165,10 +165,6 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:windowSoftInputMode="stateHidden|adjustResize"/>
-        <activity
-            android:name="com.maicius.wake.InterChange.RegisterByPhone"
-            android:label="个人信息" >
-        </activity>
     </application>
 
 </manifest>

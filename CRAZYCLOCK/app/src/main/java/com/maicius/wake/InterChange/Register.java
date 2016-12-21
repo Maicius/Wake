@@ -21,6 +21,7 @@ import com.maicius.wake.web.WebService;
 
 import org.json.JSONObject;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import cn.smssdk.EventHandler;
@@ -34,10 +35,9 @@ public class Register extends Activity {
     private String info;
     private ProgressDialog dialog;
     EditText userPhoneText, passwordText, nicknameText, verCodeText;
-    String userPhone, password;
+    String userPhone, password, nickname;
     Button registerVerCode;
     Button registerButton;
-    static boolean getVerCodeCorrect = false;
     //private static Handler handler = new Handler();
 
     public void onCreate(Bundle savedInstanceState) {
@@ -52,6 +52,7 @@ public class Register extends Activity {
         registerVerCode = (Button)findViewById(R.id.register_ver_code);
         verCodeText = (EditText) findViewById(R.id.ver_code_text);
 
+
         initSDK();
         registerButton.setEnabled(false);
         Login.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +63,8 @@ public class Register extends Activity {
         registerVerCode.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 userPhone = userPhoneText.getText().toString();
+                password = passwordText.getText().toString();
+                nickname =nicknameText.getText().toString();
                 if (userPhoneText.getText().toString().equals("")){
                     raiseAlertDialog("提示","手机号不能为空");
                 }
@@ -76,7 +79,9 @@ public class Register extends Activity {
                         || passwordText.getText().toString().length()>16){
                     raiseAlertDialog("提示","密码长度必须在6-16位之间");
                 }
-
+                else if(isContainChinese(nicknameText.getText().toString())){
+                    raiseAlertDialog("提示","sorry,暂不支持中文");
+                }
                 else{
                     new AlertDialog.Builder(Register.this)
                             .setTitle("发送短信")
@@ -121,37 +126,30 @@ public class Register extends Activity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (userPhoneText.getText().toString().equals("")){
-                    raiseAlertDialog("提示","手机号不能为空");
-                }
-                else if(!isUserName(userPhoneText.getText().toString())){
-                    raiseAlertDialog("提示","不能识别的手机号码");
+                userPhone = userPhoneText.getText().toString();
+                password = passwordText.getText().toString();
+                nickname =nicknameText.getText().toString();
 
-                }
-                else if (passwordText.getText().toString().equals("")) {
-                    raiseAlertDialog("提示","密码不能为空");
+                if(!isUserName(userPhone)){
+                    raiseAlertDialog("提示","不能识别的手机号码");
                 }
                 else if(passwordText.getText().toString().length()<6
                         || passwordText.getText().toString().length()>16){
                     raiseAlertDialog("提示","密码长度必须在6-16位之间");
+                }else if(verCodeText.getText().toString().length() != 4)
+                {
+                    raiseAlertDialog("提示","请输入4位验证码");
                 }
-                else if(verCodeText.getText().toString().equals("")){
-                    raiseAlertDialog("提示","请输入正确的验证码");
+                else if(isContainChinese(nicknameText.getText().toString())){
+                    raiseAlertDialog("提示","sorry,暂不支持中文");
                 }
                 else{
-                    SMSSDK.submitVerificationCode("86", userPhone, verCodeText.getText().toString());//对验证码进行验证->回调函数
-                    if(getVerCodeCorrect == true) {
-                        dialog = new ProgressDialog(Register.this);
-                        dialog.setTitle("提示");
-                        dialog.setMessage("正在注册，请稍后...");
-                        dialog.setCancelable(false);
-                        dialog.show();
-                        //创建子线程
-                        new Thread(new SignUpThread()).start();
-                    }
-                    else{
-                        raiseAlertDialog("提示","请输入正确的验证码");
-                    }
+                    SMSSDK.submitVerificationCode("86", userPhone, verCodeText.getText().toString());
+                    dialog = new ProgressDialog(Register.this);
+                    dialog.setTitle("提示");
+                    dialog.setMessage("正在注册，请稍后...");
+                    dialog.setCancelable(false);
+                    dialog.show();
                 }
             }
         });
@@ -159,16 +157,12 @@ public class Register extends Activity {
 
     public class SignUpThread implements Runnable {
         public void run() {
-            info = WebService.executeHttpGet(userPhoneText.getText().toString(),
-                    passwordText.getText().toString(),
-                    nicknameText.getText().toString(),
-                    WebService.State.Register);
+            info = WebService.executeHttpGet(userPhone, password, nickname, WebService.State.Register);
             handler.post(new Runnable() {
                 @Override
                 public void run() {
-                    // 最好返回一个固定键值，根据键值判断是否登陆成功，有键值就保存该info跳转，没键值就是错误信息直接toast
-                    dialog.dismiss();
 
+                    dialog.dismiss();
                     if (info.equals("success")) {
                         AlertDialog.Builder alertDialog = new AlertDialog.Builder(Register.this);
                         alertDialog.setTitle("注册成功").setMessage("欢迎来到Wake！");
@@ -182,8 +176,8 @@ public class Register extends Activity {
                         alertDialog.create().show();
 
                     }
-                    else if (info.equals("failed")) {
-                        raiseAlertDialog("注册信息","Sorry, 注册失败");
+                    else{
+                        raiseAlertDialog("注册信息","Sorry,注册失败");
                     }
                 }
             });
@@ -194,6 +188,15 @@ public class Register extends Activity {
     }
     private boolean isUserName(String username){
         return Pattern.matches("[1][3578]\\d{9}", username);
+    }
+    public static boolean isContainChinese(String str) {
+
+        Pattern p = Pattern.compile("[\u4e00-\u9fa5]");
+        Matcher m = p.matcher(str);
+        if (m.find()) {
+            return true;
+        }
+        return false;
     }
 
     private void raiseAlertDialog(String title, String message){
@@ -231,6 +234,7 @@ public class Register extends Activity {
             switch (msg.what)
             {
                 case CODE_ING://已发送,倒计时
+                    //int TIME = 60;
                     registerVerCode.setText("重新发送("+--TIME+"s)");
                     break;
                 case CODE_REPEAT://重新发送
@@ -248,22 +252,24 @@ public class Register extends Activity {
                         //验证码验证成功
                         if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE)
                         {
-                            getVerCodeCorrect = true;
-                            Toast.makeText(Register.this, "验证成功", Toast.LENGTH_LONG).show();
-                            registerButton.setClickable(true);
+                            //Toast.makeText(Register.this, "验证成功", Toast.LENGTH_LONG).show();
+                            new Thread(new SignUpThread()).start();
                         }
                         //已发送验证码
                         else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE)
                         {
+
                             Toast.makeText(getApplicationContext(), "验证码已经发送",
                                     Toast.LENGTH_SHORT).show();
                         } else
                         {
+                            dialog.dismiss();
                             ((Throwable) data).printStackTrace();
                         }
                     }
                     if(result==SMSSDK.RESULT_ERROR)
                     {
+                        dialog.dismiss();
                         try {
                             Throwable throwable = (Throwable) data;
                             throwable.printStackTrace();

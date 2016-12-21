@@ -6,4 +6,3 @@
     <corners android:topLeftRadius="10dp" android:topRightRadius="10dp"
         android:bottomRightRadius="10dp" android:bottomLeftRadius="10dp"/>
 </shape>
-<!-- From: file:/F:/Wake/CRAZYCLOCK/app/src/main/res/drawable/background_login_div_bg.xml -->

@@ -12,6 +12,8 @@ public class Service {
 	public Boolean login(String username, String password) {
 
 		// 获取Sql查询语句
+		userinfo="";
+		String nickname="";
 		String logSql = "select * from appuser where username ='" + username
 				+ "' and password ='" + password + "'";
 
@@ -21,8 +23,10 @@ public class Service {
 
 		// 操作DB对象
 		try {
-			ResultSet rs = sql.executeQuery(logSql);
+			ResultSet rs= sql.executeQuery(logSql);
 			if (rs.next()) {
+				nickname = rs.getString("nickname");
+				userinfo="success"+"#"+nickname;
 				sql.closeDB();
 				return true;
 			}
@@ -99,7 +103,7 @@ public class Service {
 		try {
 			ResultSet rs = sql.executeQuery(SqlQuery);
 			while (rs.next()) {
-				String tmp=rs.getString("time").substring(0, 19)+"#" ;
+				String tmp=rs.getString("up_time").substring(0, 19)+"#" ;
 				timeList+=tmp;
 			}
 			sql.closeDB();
@@ -127,8 +131,8 @@ public Boolean getUserInfo(String username) {
 			if (rs.next()) {
 				String user_name=rs.getString("username");
 				String nickname=rs.getString("nickname");
-				String biref_intro=rs.getString("biref_intro");
-				userinfo=user_name+"#"+nickname+"#"+biref_intro;
+				String brief_intro=rs.getString("brief_intro");
+				userinfo=user_name+"#"+nickname+"#"+brief_intro;
 			}
 			sql.closeDB();
 			return true;
@@ -139,11 +143,11 @@ public Boolean getUserInfo(String username) {
 		return false;
 	}
 	
-public Boolean setUserInfo(String username,String password, String phone) {
+public Boolean setUserInfo(String username, String nickname, String brief_intro) {
 	
 			// 获取Sql查询语句
-			String SqlUpdate = "update appuser set name='"+username+"',password='"+password+"',phone='"+phone+"' where name ='"+username+"'";
-
+			String SqlUpdate = "update appuser set nickname='"+nickname+"',brief_intro='"+brief_intro+"'where username ='"+username+"'";
+            System.out.println(SqlUpdate);
 			// 获取DB对象
 			DBManager sql = DBManager.createInstance();
 			sql.connectDB();
@@ -180,7 +184,7 @@ public Boolean setUserInfo(String username,String password, String phone) {
 	
 	private Boolean checkName(String _name)
 	{
-		String checksql ="select * from appuser where name ="+"'"+_name+"'";
+		String checksql ="select * from appuser where username ='"+_name+"'";
 		
 		// 获取DB对象
 		DBManager sql = DBManager.createInstance();

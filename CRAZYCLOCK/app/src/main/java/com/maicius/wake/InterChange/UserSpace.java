@@ -28,7 +28,7 @@ public class UserSpace extends Activity {
 
     private void mInitUI() {
         TextView userspace_name = (TextView) findViewById(R.id.userspace_name);
-        userspace_name.setText(MainActivity.s_userName + "的空间");
+        userspace_name.setText(MainActivity.s_nickname + "的空间");
 
         ImageView image_userInfo = (ImageView) findViewById(R.id.userInfo);
         ImageView image_getUpTime = (ImageView) findViewById(R.id.getUpTime);

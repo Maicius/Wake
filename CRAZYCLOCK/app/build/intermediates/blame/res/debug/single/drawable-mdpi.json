@@ -1,0 +1,422 @@
+[
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\btn_strip_trans_left_pressed.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\btn_strip_trans_left_pressed.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\btn_in_call_round_normal.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\btn_in_call_round_normal.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_menu_desk_clock.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\ic_menu_desk_clock.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_spinner_ab_default_holo_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_spinner_ab_default_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_clear_disabled.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_clear_disabled.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ab_transparent_light_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ab_transparent_light_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_clock_strip_desk_clock.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\ic_clock_strip_desk_clock.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_textfield_search_default_holo_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_textfield_search_default_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_tab_unselected_pressed_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_tab_unselected_pressed_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_search_api_holo_light.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_search_api_holo_light.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ab_stacked_transparent_dark_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ab_stacked_transparent_dark_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_tab_selected_focused_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_tab_selected_focused_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_clear_search_api_disabled_holo_light.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_clear_search_api_disabled_holo_light.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_list_longpressed_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_clear_normal.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_clear_normal.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_spinner_ab_default_holo_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_spinner_ab_default_holo_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\list_selector_background_pressed.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\list_selector_background_pressed.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_menu_dropdown_panel_holo_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_menu_dropdown_panel_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_voice_search.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_voice_search.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_menu_hardkey_panel_holo_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_menu_hardkey_panel_holo_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\btn_strip_trans_right_pressed.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\btn_strip_trans_right_pressed.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_list_selector_disabled_holo_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_spinner_ab_pressed_holo_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_spinner_ab_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_clock_add_alarm.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\ic_clock_add_alarm.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ab_bottom_solid_light_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ab_bottom_solid_light_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_indicator_on.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\ic_indicator_on.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_go_search_api_holo_light.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_go_search_api_holo_light.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_clear_search_api_holo_light.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_clear_search_api_holo_light.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_tab_selected_pressed_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_tab_selected_pressed_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\btn_strip_trans_left_selected.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\btn_strip_trans_left_selected.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_list_pressed_holo_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_voice_search_api_holo_light.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_voice_search_api_holo_light.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\dialog_divider_horizontal_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\dialog_divider_horizontal_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\stat_notify_alarm.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\stat_notify_alarm.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_menu_dropdown_panel_holo_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_menu_dropdown_panel_holo_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_commit_search_api_holo_light.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_commit_search_api_holo_light.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_textfield_search_right_default_holo_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_textfield_search_right_default_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_textfield_search_default_holo_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_textfield_search_default_holo_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_menu_share_holo_light.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_menu_share_holo_light.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_dialog_time.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\ic_dialog_time.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ab_stacked_solid_dark_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ab_stacked_solid_dark_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_textfield_search_selected_holo_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_textfield_search_selected_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\btn_in_call_round_selected.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\btn_in_call_round_selected.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_go.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_go.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ab_share_pack_holo_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ab_share_pack_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_list_pressed_holo_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_spinner_ab_focused_holo_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_spinner_ab_focused_holo_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ab_bottom_transparent_light_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ab_bottom_transparent_light_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_cab_background_top_holo_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_cab_background_top_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_clock_alarm_off.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\ic_clock_alarm_off.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_clock_add_alarm_selected.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\ic_clock_add_alarm_selected.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ab_stacked_solid_light_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ab_stacked_solid_light_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_spinner_ab_focused_holo_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_spinner_ab_focused_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_clock_alarm_on.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\ic_clock_alarm_on.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_cab_background_bottom_holo_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_cab_background_bottom_holo_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_menu_moreoverflow_normal_holo_dark.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_menu_moreoverflow_normal_holo_dark.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_spinner_ab_pressed_holo_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_spinner_ab_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ab_stacked_transparent_light_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ab_stacked_transparent_light_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_commit_search_api_holo_dark.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_commit_search_api_holo_dark.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_clock_alarm_selected.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\ic_clock_alarm_selected.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_menu_moreoverflow_normal_holo_light.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_menu_moreoverflow_normal_holo_light.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\btn_strip_trans_right_selected.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\btn_strip_trans_right_selected.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ab_bottom_transparent_dark_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ab_bottom_transparent_dark_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\btn_strip_trans_middle_selected.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\btn_strip_trans_middle_selected.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_cab_done_holo_dark.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_cab_done_holo_dark.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_background.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\ic_background.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_textfield_search_right_default_holo_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_textfield_search_right_default_holo_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ab_bottom_solid_dark_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ab_bottom_solid_dark_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_textfield_search_right_selected_holo_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_textfield_search_right_selected_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_cab_background_top_holo_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_cab_background_top_holo_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\btn_in_call_round_disable.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\btn_in_call_round_disable.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_tab_selected_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_tab_selected_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\btn_strip_trans_middle_normal.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\btn_strip_trans_middle_normal.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_cab_background_bottom_holo_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_cab_background_bottom_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\btn_strip_trans_left_normal.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\btn_strip_trans_left_normal.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_spinner_ab_disabled_holo_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_spinner_ab_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\btn_in_call_round_pressed.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\btn_in_call_round_pressed.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_spinner_ab_disabled_holo_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_spinner_ab_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_list_divider_holo_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_list_divider_holo_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\divider_vertical_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\divider_vertical_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_ab_back_holo_dark.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_ab_back_holo_dark.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\dialog.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\dialog.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_background3.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\ic_background3.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_menu_clock_face.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\ic_menu_clock_face.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_menu_alarms.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\ic_menu_alarms.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_cab_done_holo_light.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_cab_done_holo_light.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_search.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_search.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\btn_strip_trans_middle_pressed.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\btn_strip_trans_middle_pressed.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ab_solid_dark_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ab_solid_dark_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_list_focused_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_menu_share_holo_dark.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_menu_share_holo_dark.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_indicator_off.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\ic_indicator_off.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_textfield_search_right_selected_holo_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_textfield_search_right_selected_holo_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_background2.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\ic_background2.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\btn_in_call_round_disable_focused.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\btn_in_call_round_disable_focused.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ab_transparent_dark_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ab_transparent_dark_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_menu_add.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\ic_menu_add.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ic_ab_back_holo_light.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ic_ab_back_holo_light.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_menu_hardkey_panel_holo_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_menu_hardkey_panel_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ab_solid_light_holo.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ab_solid_light_holo.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_list_selector_disabled_holo_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\btn_strip_trans_right_normal.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable-mdpi\\btn_strip_trans_right_normal.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_ab_share_pack_holo_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_ab_share_pack_holo_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_textfield_search_selected_holo_light.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_textfield_search_selected_holo_light.9.png"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\abc_list_divider_holo_dark.9.png",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable-mdpi\\abc_list_divider_holo_dark.9.png"
+    }
+]

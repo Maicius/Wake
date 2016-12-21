@@ -9,6 +9,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.app.Activity;
 import android.view.View;
@@ -20,12 +22,16 @@ import com.maicius.wake.alarmClock.MainActivity;
 import com.maicius.wake.alarmClock.R;
 import com.maicius.wake.web.WebService;
 
+import java.util.StringTokenizer;
+import java.util.regex.Pattern;
+
 public class LogIn extends Activity {
     //创建等待框
     private ProgressDialog dialog;
     //返回的数据
     private String info;
     EditText username, password;
+    Button SignIn;
     private static Handler handler = new Handler();
 
     public void onCreate(Bundle savedInstanceState) {
@@ -34,10 +40,11 @@ public class LogIn extends Activity {
         setContentView(R.layout.log_in);
 
         TextView Register = (TextView) findViewById(R.id.register);
-        final Button SignIn = (Button) findViewById(R.id.signin_button);
+        SignIn = (Button) findViewById(R.id.signin_button);
         username = (EditText) findViewById(R.id.username_edit);
         password = (EditText) findViewById(R.id.password_edit);
-
+        password.addTextChangedListener(textWatcher);
+        SignIn.setEnabled(false);
         //点击注册
         Register.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -46,14 +53,20 @@ public class LogIn extends Activity {
         });
         //点击登录
         SignIn.setOnClickListener(new View.OnClickListener() {
+
             public void onClick(View V) {
-                dialog = new ProgressDialog(LogIn.this);
-                dialog.setTitle("提示");
-                dialog.setMessage("正在登陆，请稍后...");
-                dialog.setCancelable(false);
-                dialog.show();
-                //创建子线程
-                new Thread(new MyThread()).start();
+                if(!isUserName(username.getText().toString())){
+                    raiseAlertDialog("提示","不能识别的手机号码");
+                }
+                else {
+                    dialog = new ProgressDialog(LogIn.this);
+                    dialog.setTitle("提示");
+                    dialog.setMessage("正在登陆，请稍后...");
+                    dialog.setCancelable(false);
+                    dialog.show();
+                    //创建子线程
+                    new Thread(new MyThread()).start();
+                }
             }
         });
         //setContentView(R.layout.user_space);
@@ -68,18 +81,8 @@ public class LogIn extends Activity {
             handler.post(new Runnable() {
                 @Override
                 public void run() {
-                    // 最好返回一个固定键值，根据键值判断是否登陆成功，有键值就保存该info跳转，没键值就是错误信息直接toast
-
                     dialog.dismiss();
-
-                    if (info.equals("success")) {
-                        Log.v("sss", "start user space!");
-                        MainActivity.s_userName = username.getText().toString();
-                        MainActivity.s_isLogged = true;
-                        startActivity(new Intent(LogIn.this, UserSpace.class));
-                        LogIn.this.finish();
-
-                    } else if (info.equals("failed")) {
+                    if (info.equals("failed")) {
                         AlertDialog.Builder alertDialog = new AlertDialog.Builder(LogIn.this);
                         alertDialog.setTitle("登陆信息").setMessage("登陆失败：用户名或密码错误！");
                         alertDialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
@@ -89,6 +92,19 @@ public class LogIn extends Activity {
                             }
                         });
                         alertDialog.create().show();
+                    } else {
+                        StringTokenizer st = new StringTokenizer(info, "#");
+                        String info_success = st.nextToken();
+                        String info_nickname = st.nextToken();
+                        if (info_success.equals("success")) {
+                            Log.v("sss", "start user space!");
+                            MainActivity.s_nickname = info_nickname;
+                            MainActivity.s_userName = username.getText().toString();
+                            MainActivity.s_isLogged = true;
+                            startActivity(new Intent(LogIn.this, UserSpace.class));
+                            LogIn.this.finish();
+                        }
+
                     }
                 }
             });
@@ -97,6 +113,37 @@ public class LogIn extends Activity {
 
     private void Register() {
         startActivity(new Intent(this, Register.class));
+    }
+
+    private TextWatcher textWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+               SignIn.setEnabled(false);
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+              if(s.length() >= 6)
+                  SignIn.setEnabled(true);
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+             SignIn.setEnabled(true);
+        }
+    };
+    private boolean isUserName(String username){
+        return Pattern.matches("[1][3578]\\d{9}", username);
+    }
+    private void raiseAlertDialog(String title, String message){
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(LogIn.this);
+        alertDialog.setTitle(title).setMessage(message);
+        alertDialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+        alertDialog.create().show();
     }
 }
 

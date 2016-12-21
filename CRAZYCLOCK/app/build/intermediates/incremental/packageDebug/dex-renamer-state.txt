@@ -1,0 +1,7 @@
+#Thu Dec 22 00:40:56 CST 2016
+base.0=F\:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_5fc0404e8d8693aae6611e73532a57359c0f78cb
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=F\:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_bc667b63ef763c84b89192fa6ce358fcf39d988f\\classes.dex
+base.1=F\:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_bc667b63ef763c84b89192fa6ce358fcf39d988f
+file.0=F\:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_5fc0404e8d8693aae6611e73532a57359c0f78cb\\classes.dex

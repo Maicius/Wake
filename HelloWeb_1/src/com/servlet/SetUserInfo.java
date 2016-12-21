@@ -2,6 +2,8 @@ package com.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,11 +33,20 @@ public class SetUserInfo extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String username=request.getParameter("username");
-		username = new String(username.getBytes("ISO-8859-1"), "UTF-8");
-		String password=request.getParameter("password");
-		String phone=request.getParameter("phone");
+		String username="", nickname="",brief_intro="";
+		try{
+		username=request.getParameter("username");
 		
+		username = new String(username.getBytes("ISO-8859-1"), "UTF-8");
+		String nicknameUTF8=request.getParameter("nickname");
+		nickname=URLDecoder.decode(nicknameUTF8,"UTF-8");
+		//nickname = new String(nickname.getBytes("ISO-8859-1"), "UTF-8");
+		String brief_introUTF8=request.getParameter("brief_intro");
+		brief_intro = URLDecoder.decode(brief_introUTF8,"UTF-8");
+		//brief_intro = new String(brief_intro.getBytes("ISO-8859-1"), "UTF-8");
+		}catch(UnsupportedEncodingException e){
+            e.printStackTrace();
+        }
 	    Service serv = new Service();
 
 	    // 返回信息
@@ -44,7 +55,7 @@ public class SetUserInfo extends HttpServlet {
 		 PrintWriter out = response.getWriter();
 		 
 		// 验证处理
-		boolean ok = serv.setUserInfo(username,password,phone);
+		boolean ok = serv.setUserInfo(username,nickname,brief_intro);
 		if (ok) {
 			System.out.print("Succss in setUserInfo");
 			request.getSession().setAttribute("username", username);

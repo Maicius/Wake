@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\raw\\in_call_alarm.ogg",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\raw\\in_call_alarm.ogg"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\raw\\smssdk_pydb",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.1.3\\res\\raw\\smssdk_pydb"
+    },
+    {
+        "merged": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\raw\\fallbackring.ogg",
+        "source": "F:\\Android_workplace\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\raw\\fallbackring.ogg"
+    }
+]

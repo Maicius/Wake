@@ -23,6 +23,7 @@ public class LogLet extends HttpServlet {
 
 		// 接收信息
 		String username = request.getParameter("username");
+		System.out.println("username="+username);
 		username = new String(username.getBytes("ISO-8859-1"), "UTF-8");
 		String password = request.getParameter("password");
 		System.out.println(username + "--" + password);
@@ -41,7 +42,7 @@ public class LogLet extends HttpServlet {
 			System.out.print("Succss in Login");
 			request.getSession().setAttribute("username", username);
 			// response.sendRedirect("welcome.jsp");
-			 out.print("success");
+			 out.print(serv.userinfo);	
 		} else {
 			 out.print("failed");
 		}
