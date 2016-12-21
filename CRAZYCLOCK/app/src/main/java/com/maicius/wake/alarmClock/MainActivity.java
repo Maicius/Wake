@@ -126,13 +126,14 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
             Cursor rs = dbManager.query();
             if(rs.getCount()==1) {
-                Appuser user = new Appuser();
-                MainActivity.s_userName = user.sqlusername;
-                MainActivity.s_nickname = user.sqlnickname;
+                rs.moveToFirst();
+                s_userName = rs.getString(0);
+                s_nickname = rs.getString(2);
                 s_isLogged = true;
                 startActivity(new Intent(this, UserSpace.class));
             }
-            startActivity(new Intent(this, LogIn.class));
+            else
+                startActivity(new Intent(this, LogIn.class));
         } else {
             startActivity(new Intent(this, UserSpace.class));
         }

@@ -16,7 +16,7 @@ import com.maicius.wake.alarmClock.MainActivity;
 import com.maicius.wake.alarmClock.R;
 
 public class UserSpace extends Activity {
-    DBManager dbManager = new DBManager(this);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +49,10 @@ public class UserSpace extends Activity {
         image_exit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 MainActivity.s_isLogged=false;
-                UserSpace.this.finish();
+                DBManager dbManager = new DBManager(UserSpace.this);
                 dbManager.deleteAppuser();
+                UserSpace.this.finish();
+
             }
         });
     }

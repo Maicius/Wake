@@ -4,6 +4,7 @@ import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 
@@ -24,10 +25,12 @@ public class DBManager{
     public void insertSQL(Appuser user){
         db.beginTransaction();
         try{
-            db.execSQL("insert into sqlUser values(?,?,?)",
+            db.execSQL("insert into sqlUser(username, password, nickname) values(?,?,?)",
                     new Object[]{user.sqlusername, user.sqlpassword, user.sqlnickname});
             db.setTransactionSuccessful();
-        }finally {
+        }catch(SQLException E){
+            E.printStackTrace();
+        } finally{
             db.endTransaction();
         }
     }
