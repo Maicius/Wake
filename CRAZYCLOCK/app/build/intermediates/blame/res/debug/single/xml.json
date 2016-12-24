@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\xml\\settings.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\xml\\settings.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\xml\\alarm_prefs.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\xml\\alarm_prefs.xml"
+    }
+]

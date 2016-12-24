@@ -52,7 +52,6 @@ public class Register extends Activity {
         registerVerCode = (Button)findViewById(R.id.register_ver_code);
         verCodeText = (EditText) findViewById(R.id.ver_code_text);
 
-
         initSDK();
         registerButton.setEnabled(false);
         Login.setOnClickListener(new View.OnClickListener() {

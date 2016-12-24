@@ -69,30 +69,48 @@
             android:layout_height="wrap_content"
             android:id="@+id/userInfo"
             android:src="@drawable/btn_login"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="68dp"
-            android:layout_marginStart="190dp"
-            android:layout_gravity="right" />
+            android:layout_gravity="right"
+            android:layout_above="@+id/textView2"
+            android:layout_alignLeft="@+id/sleep_history_image"
+            android:layout_alignStart="@+id/sleep_history_image" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="个人信息"
 
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="140dp"
-            android:layout_marginStart="190dp"
             android:id="@+id/textView2"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:layout_alignTop="@+id/getUpTime"
+            android:layout_centerHorizontal="true" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sleep_history_image"
+            android:src="@drawable/sleep_history_icon"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="睡眠历史"
+            android:id="@+id/sleep_history_text"
+            android:layout_gravity="center"
+            android:layout_below="@+id/sleep_history_image"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/exit"
             android:src="@drawable/exit"
-            android:layout_marginRight="40dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="68dp" />
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/textView3"
+            android:layout_alignEnd="@+id/textView3"
+            android:layout_marginBottom="53dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -100,9 +118,12 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="退出登录"
             android:id="@+id/textView3"
+            android:layout_marginRight="47dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginRight="42dp"
-            android:layout_marginTop="140dp" />
+            android:layout_marginEnd="47dp"
+            android:layout_marginBottom="24dp" />
 
     </RelativeLayout>
 

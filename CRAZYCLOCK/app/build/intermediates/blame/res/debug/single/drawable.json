@@ -1,0 +1,154 @@
+[
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_login.png",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable\\btn_login.png"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_holo_light.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_ic_clear_holo_light.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_corners_bg_pre.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.1.3\\res\\drawable\\smssdk_corners_bg_pre.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_searchview_right_holo_dark.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_textfield_searchview_right_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_search_dropdown_light.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_search_dropdown_light.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_btn_disenable.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.1.3\\res\\drawable\\smssdk_btn_disenable.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_edittext_bg_selector.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.1.3\\res\\drawable\\smssdk_edittext_bg_selector.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_searchview_holo_dark.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_textfield_searchview_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_searchview_right_holo_light.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_textfield_searchview_right_holo_light.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_searchview_holo_light.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_textfield_searchview_holo_light.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_strip_trans_right.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable\\btn_strip_trans_right.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_ab_holo_light.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_spinner_ab_holo_light.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_country_group_scroll_up.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.1.3\\res\\drawable\\smssdk_country_group_scroll_up.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_btn_enable.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.1.3\\res\\drawable\\smssdk_btn_enable.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_corners_bg_nor.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.1.3\\res\\drawable\\smssdk_corners_bg_nor.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_search_dropdown_dark.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_search_dropdown_dark.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\incall_round_button.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable\\incall_round_button.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_clock_onoff.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable\\indicator_clock_onoff.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_strip_trans_left.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable\\btn_strip_trans_left.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_ab_holo_dark.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_spinner_ab_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_corners_bg.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.1.3\\res\\drawable\\smssdk_corners_bg.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_ic_clear.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\add_alarm.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable\\add_alarm.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\exit.png",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable\\exit.png"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_ab_holo.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_tab_indicator_ab_holo.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_country_bg_selector.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.1.3\\res\\drawable\\smssdk_country_bg_selector.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_enter.png",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable\\btn_enter.png"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_login_div_bg.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable\\background_login_div_bg.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_dialog_btn_back.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.1.3\\res\\drawable\\smssdk_dialog_btn_back.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_strip_trans_middle.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable\\btn_strip_trans_middle.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\clock_selector.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\drawable\\clock_selector.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_country_group_scroll_down.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.1.3\\res\\drawable\\smssdk_country_group_scroll_down.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    }
+]

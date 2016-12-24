@@ -20,4 +20,3 @@
   <item android:state_pressed="true"
       android:drawable="@drawable/list_selector_background_pressed" />
 </selector>
-<!-- From: file:/F:/Wake/CRAZYCLOCK/app/src/main/res/drawable/clock_selector.xml -->

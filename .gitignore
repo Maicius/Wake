@@ -1,0 +1,8 @@
+*.properties
+*.bin
+*.lock
+*.apk
+/debug/
+/build/
+.ap_
+/taskArtifacts/

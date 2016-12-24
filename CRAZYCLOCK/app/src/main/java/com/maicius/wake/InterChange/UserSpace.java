@@ -21,7 +21,7 @@ public class UserSpace extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.v("sss", "******************enter Appuser space!");
+        Log.v("sss", "******************enter AppUser space!");
         setContentView(R.layout.user_space);
 
         mInitUI();
@@ -35,7 +35,7 @@ public class UserSpace extends Activity {
         ImageView image_userInfo = (ImageView) findViewById(R.id.userInfo);
         ImageView image_getUpTime = (ImageView) findViewById(R.id.getUpTime);
         ImageView image_exit = (ImageView) findViewById(R.id.exit);
-
+        ImageView image_sleepHistory = (ImageView) findViewById(R.id.sleep_history_image);
         image_userInfo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(UserSpace.this, UserInfo.class));
@@ -50,9 +50,14 @@ public class UserSpace extends Activity {
             public void onClick(View v) {
                 MainActivity.s_isLogged=false;
                 DBManager dbManager = new DBManager(UserSpace.this);
-                dbManager.deleteAppuser();
+                dbManager.deleteAppUser();
                 UserSpace.this.finish();
 
+            }
+        });
+        image_sleepHistory.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(UserSpace.this, SleepHistory.class));
             }
         });
     }

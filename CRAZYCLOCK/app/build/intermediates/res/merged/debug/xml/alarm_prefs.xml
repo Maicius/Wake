@@ -26,4 +26,3 @@
         android:title="@string/label"
         android:dialogTitle="@string/label" />
 </PreferenceScreen>
-<!-- From: file:/F:/Wake/CRAZYCLOCK/app/src/main/res/xml/alarm_prefs.xml -->

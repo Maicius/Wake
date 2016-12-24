@@ -1,0 +1,150 @@
+[
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_home.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_action_bar_home.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\alarm_clock.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\layout\\alarm_clock.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\alarm_alert.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\layout\\alarm_alert.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\user_space.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\layout\\user_space.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\alarm_notification.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\layout\\alarm_notification.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\time_item.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\layout\\time_item.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\register.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\layout\\register.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_action_mode_close_item.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_decor_include.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_action_bar_decor_include.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_get_up_history.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\layout\\activity_get_up_history.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_decor_overlay.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_action_bar_decor_overlay.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_screen.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_tabbar.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_action_bar_tabbar.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\sleep_histroy.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\layout\\sleep_histroy.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_include.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_activity_chooser_view_include.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_tab.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_action_bar_tab.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\context_menu_header.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\layout\\context_menu_header.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\set_alarm.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\layout\\set_alarm.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\18.0.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_user_info.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\layout\\activity_user_info.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\alarm_time.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\layout\\alarm_time.xml"
+    },
+    {
+        "merged": "F:\\Wake\\CRAZYCLOCK\\app\\build\\intermediates\\res\\merged\\debug\\layout\\log_in.xml",
+        "source": "F:\\Wake\\CRAZYCLOCK\\app\\src\\main\\res\\layout\\log_in.xml"
+    }
+]

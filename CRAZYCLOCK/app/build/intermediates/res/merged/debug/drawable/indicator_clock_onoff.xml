@@ -19,4 +19,3 @@
         android:drawable="@drawable/ic_clock_alarm_selected" />
     <item android:drawable="@drawable/ic_clock_alarm_on" />
 </selector>
-<!-- From: file:/F:/Wake/CRAZYCLOCK/app/src/main/res/drawable/indicator_clock_onoff.xml -->

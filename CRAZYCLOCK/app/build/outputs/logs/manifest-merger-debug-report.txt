@@ -1,12 +1,14 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:2:1-169:12
+ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:2:1-173:12
 	package
 		ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:3:5-42
 		INJECTED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml
 		INJECTED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml
 	android:versionName
 		ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml
+		INJECTED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml
 	android:versionCode
 		ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:4:5-28
 		INJECTED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml
@@ -106,7 +108,7 @@ ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:37:5-88
 	android:name
 		ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:37:30-85
 application
-ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:39:5-167:19
+ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:39:5-171:19
 MERGED from [:SMSSDK-2.1.3:] F:\Wake\CRAZYCLOCK\app\build\intermediates\exploded-aar\SMSSDK-2.1.3\AndroidManifest.xml:11:5-12:19
 MERGED from [:SMSSDKGUI-2.1.3:] F:\Wake\CRAZYCLOCK\app\build\intermediates\exploded-aar\SMSSDKGUI-2.1.3\AndroidManifest.xml:11:5-12:19
 MERGED from [com.android.support:appcompat-v7:18.0.0] F:\Wake\CRAZYCLOCK\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\18.0.0\AndroidManifest.xml:19:5-20
@@ -310,13 +312,19 @@ ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:157:9-160:20
 		ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:159:13-33
 	android:name
 		ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:158:13-65
-activity#com.mob.tools.MobUIShell
-ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:162:9-166:69
-	android:windowSoftInputMode
-		ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:166:13-67
-	android:configChanges
-		ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:165:13-74
-	android:theme
-		ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:164:13-72
+activity#com.maicius.wake.InterChange.SleepHistory
+ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:161:9-164:20
+	android:label
+		ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:163:13-33
 	android:name
-		ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:163:13-52
+		ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:162:13-69
+activity#com.mob.tools.MobUIShell
+ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:166:9-170:69
+	android:windowSoftInputMode
+		ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:170:13-67
+	android:configChanges
+		ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:169:13-74
+	android:theme
+		ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:168:13-72
+	android:name
+		ADDED from F:\Wake\CRAZYCLOCK\app\src\main\AndroidManifest.xml:167:13-52
